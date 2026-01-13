@@ -132,19 +132,26 @@ const FullMenuCard: React.FC<FullMenuCardProps> = ({ monthData, monthName }) => 
               return (
                 <React.Fragment key={idx}>
                   <tr className="week-header"><th colSpan={9}>UGE {weekNum}: {firstDate} - {lastDate}</th></tr>
-                  {week.map((day, dIdx) => (
-                    <tr key={dIdx} className={getDayClass(day)}>
-                      <td className="col-dato">{day.date}</td>
-                      <td className="col-icon">{day.icon}</td>
-                      <td className="col-nr"></td>
-                      <td className="col-ret" dangerouslySetInnerHTML={{ __html: day.dish }}></td>
-                      <td className="col-sauce">{day.sauce}</td>
-                      <td className="col-kul">{day.carb}</td>
-                      <td className="col-til">{day.veg}</td>
-                      <td className="col-nr"></td>
-                      <td className="col-des" dangerouslySetInnerHTML={{ __html: day.biret }}></td>
-                    </tr>
-                  ))}
+                  {week.map((day, dIdx) => {
+                    // Generate recipe numbers based on global index
+                    const globalIdx = page1Weeks.slice(0, idx).reduce((acc, w) => acc + w.length, 0) + dIdx + 1;
+                    const hovedretNr = `HO-${String(globalIdx).padStart(3, '0')}`;
+                    const biretNr = day.biret ? `BR-${String(globalIdx).padStart(3, '0')}` : '';
+
+                    return (
+                      <tr key={dIdx} className={getDayClass(day)}>
+                        <td className="col-dato">{day.date}</td>
+                        <td className="col-icon">{day.icon}</td>
+                        <td className="col-nr">{hovedretNr}</td>
+                        <td className="col-ret" dangerouslySetInnerHTML={{ __html: day.dish }}></td>
+                        <td className="col-sauce">{day.sauce}</td>
+                        <td className="col-kul">{day.carb}</td>
+                        <td className="col-til">{day.veg}</td>
+                        <td className="col-nr">{biretNr}</td>
+                        <td className="col-des" dangerouslySetInnerHTML={{ __html: day.biret }}></td>
+                      </tr>
+                    );
+                  })}
                 </React.Fragment>
               );
             })}
@@ -186,19 +193,27 @@ const FullMenuCard: React.FC<FullMenuCardProps> = ({ monthData, monthName }) => 
               return (
                 <React.Fragment key={idx}>
                   <tr className="week-header"><th colSpan={9}>UGE {weekNum}: {firstDate} - {lastDate}</th></tr>
-                  {week.map((day, dIdx) => (
-                    <tr key={dIdx} className={getDayClass(day)}>
-                      <td className="col-dato">{day.date}</td>
-                      <td className="col-icon">{day.icon}</td>
-                      <td className="col-nr"></td>
-                      <td className="col-ret" dangerouslySetInnerHTML={{ __html: day.dish }}></td>
-                      <td className="col-sauce">{day.sauce}</td>
-                      <td className="col-kul">{day.carb}</td>
-                      <td className="col-til">{day.veg}</td>
-                      <td className="col-nr"></td>
-                      <td className="col-des" dangerouslySetInnerHTML={{ __html: day.biret }}></td>
-                    </tr>
-                  ))}
+                  {week.map((day, dIdx) => {
+                    // Generate recipe numbers based on global index (continue from page 1)
+                    const page1Total = page1Weeks.reduce((acc, w) => acc + w.length, 0);
+                    const globalIdx = page1Total + page2Weeks.slice(0, idx).reduce((acc, w) => acc + w.length, 0) + dIdx + 1;
+                    const hovedretNr = `HO-${String(globalIdx).padStart(3, '0')}`;
+                    const biretNr = day.biret ? `BR-${String(globalIdx).padStart(3, '0')}` : '';
+
+                    return (
+                      <tr key={dIdx} className={getDayClass(day)}>
+                        <td className="col-dato">{day.date}</td>
+                        <td className="col-icon">{day.icon}</td>
+                        <td className="col-nr">{hovedretNr}</td>
+                        <td className="col-ret" dangerouslySetInnerHTML={{ __html: day.dish }}></td>
+                        <td className="col-sauce">{day.sauce}</td>
+                        <td className="col-kul">{day.carb}</td>
+                        <td className="col-til">{day.veg}</td>
+                        <td className="col-nr">{biretNr}</td>
+                        <td className="col-des" dangerouslySetInnerHTML={{ __html: day.biret }}></td>
+                      </tr>
+                    );
+                  })}
                 </React.Fragment>
               );
             })}

@@ -7,7 +7,8 @@ import { GoogleGenAI } from "@google/genai";
 import { parseImportedTextRequest, parseImportedFileRequest } from '../services/geminiService';
 import { getUserRecipes, deleteUserRecipe, saveUserRecipe } from '../services/recipeStorage';
 import { getHorkramPrice } from '../services/pricingService';
-import { Search, Database, Plus, Trash2, Check, Loader2, Hash, Coins, TrendingDown, Users, Upload, FileText, FolderOpen, AlertCircle, CheckCircle2, X } from 'lucide-react';
+import { dataRelationshipStore, updateRecipeWithCascade } from '../services/dataRelationshipService';
+import { Search, Database, Plus, Trash2, Check, Loader2, Hash, Coins, TrendingDown, Users, Upload, FileText, FolderOpen, AlertCircle, CheckCircle2, X, GitBranch, GitMerge } from 'lucide-react';
 import mammoth from 'mammoth';
 interface MenuSelectorProps {
   onSelect: (name: string, category: string, mdsNumber?: string, sourceReference?: string) => void;
@@ -85,13 +86,17 @@ const MenuSelector: React.FC<MenuSelectorProps> = ({ onSelect, onImportedRecipe 
         return false;
       });
 
-      const staticList = (menuCategories[activeCategory] || []).map(item => ({
-        ...item,
-        category: activeCategory,
-        portions: null,
-        fullData: null,
-        isAuthentic: false
-      }));
+      const authenticIds = new Set(mappedAuthentic.map(r => String(r.id)));
+
+      const staticList = (menuCategories[activeCategory] || [])
+        .filter(item => !authenticIds.has(String(item.id)))
+        .map(item => ({
+          ...item,
+          category: activeCategory,
+          portions: null,
+          fullData: null,
+          isAuthentic: false
+        }));
 
       allItems = [...mappedAuthentic, ...staticList];
     }
@@ -155,7 +160,7 @@ const MenuSelector: React.FC<MenuSelectorProps> = ({ onSelect, onImportedRecipe 
             recipesToSave.forEach(recipe => {
               recipe.category = recipe.category || 'user';
               recipe.sourceReference = file.name;
-              saveUserRecipe(recipe);
+              updateRecipeWithCascade(recipe); // Use cascade update for proper relationship handling
               if (onImportedRecipe) onImportedRecipe(recipe);
             });
           }
@@ -232,7 +237,7 @@ const MenuSelector: React.FC<MenuSelectorProps> = ({ onSelect, onImportedRecipe 
                       <span className="text-[10px] font-bold truncate uppercase tracking-tighter">{job.fileName}</span>
                     </div>
                     <span className={`text-[8px] font-black uppercase px-2 py-0.5 rounded ${job.status === 'completed' ? 'bg-green-500/20 text-green-400' :
-                        job.status === 'error' ? 'bg-red-500/20 text-red-400' : 'text-slate-500'
+                      job.status === 'error' ? 'bg-red-500/20 text-red-400' : 'text-slate-500'
                       }`}>
                       {job.status}
                     </span>
@@ -294,8 +299,8 @@ const MenuSelector: React.FC<MenuSelectorProps> = ({ onSelect, onImportedRecipe 
                 key={cat.key}
                 onClick={() => setActiveCategory(cat.key)}
                 className={`px-8 py-4 rounded-[1.5rem] text-[10px] font-black uppercase border-2 transition-all flex items-center gap-3 ${activeCategory === cat.key
-                    ? 'bg-orange-600 text-white border-orange-700 shadow-xl scale-105'
-                    : 'bg-white text-slate-500 border-slate-100 hover:border-orange-200'
+                  ? 'bg-orange-600 text-white border-orange-700 shadow-xl scale-105'
+                  : 'bg-white text-slate-500 border-slate-100 hover:border-orange-200'
                   }`}
               >
                 {cat.label}
@@ -306,11 +311,43 @@ const MenuSelector: React.FC<MenuSelectorProps> = ({ onSelect, onImportedRecipe 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredItems.length > 0 ? filteredItems.map((item) => {
               const isUserItem = activeCategory === 'user';
+
+              // Determine relationship type using DataRelationshipStore
+              const recipeId = item.id || item.fullData?.recipeNumber;
+              const children = recipeId ? dataRelationshipStore.getChildren(recipeId) : [];
+              const parents = recipeId ? dataRelationshipStore.getParents(recipeId) : [];
+              const hasChildren = children.length > 0;
+              const hasParents = parents.length > 0;
+              const isParent = hasChildren;
+              const isChild = hasParents;
+
               return (
-                <div key={item.id} className="p-6 border border-slate-100 rounded-[2.5rem] bg-white hover:border-blue-50 hover:shadow-2xl transition-all flex flex-col justify-between min-h-[250px] shadow-sm group">
+                <div key={item.id} className={`p-6 border border-slate-100 rounded-[2.5rem] bg-white hover:border-blue-50 hover:shadow-2xl transition-all flex flex-col justify-between min-h-[250px] shadow-sm group relative ${isParent ? 'ring-2 ring-green-200 bg-green-50/30' : ''} ${isChild ? 'ring-2 ring-blue-200 bg-blue-50/30' : ''}`}>
+                  {/* Relationship Indicators */}
+                  {isParent && (
+                    <div className="absolute top-4 right-4 bg-green-600 text-white p-1 rounded-full" title="Parent Recipe - Has Sub-recipes">
+                      <GitBranch size={12} />
+                    </div>
+                  )}
+                  {isChild && (
+                    <div className="absolute top-4 right-12 bg-blue-600 text-white p-1 rounded-full" title="Child Recipe - Used in Other Recipes">
+                      <GitMerge size={12} />
+                    </div>
+                  )}
+
                   <div>
                     <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest block mb-3">{item.category || activeCategory}</span>
                     <span className="text-xl font-black text-slate-900 leading-tight block group-hover:text-blue-600 transition-colors mb-2">{item.name}</span>
+
+                    {/* Relationship Info */}
+                    {(isParent || isChild) && (
+                      <div className="mb-3 text-[9px] font-bold uppercase tracking-widest">
+                        {isParent && <span className="text-green-600">Parent • {children.length} sub-recipes</span>}
+                        {isParent && isChild && <span className="mx-2 text-slate-400">|</span>}
+                        {isChild && <span className="text-blue-600">Child • {parents.length} parents</span>}
+                      </div>
+                    )}
+
                     <div className="flex items-center gap-2 mt-4 bg-slate-50 rounded-xl p-2 border border-slate-100 w-fit">
                       <Hash size={14} className="text-slate-400" />
                       <span className="text-[10px] font-black text-slate-600 uppercase">#{tempMdsNumbers[item.name] || item.id}</span>

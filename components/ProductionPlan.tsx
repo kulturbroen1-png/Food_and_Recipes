@@ -2,27 +2,55 @@
 import React, { useState, useMemo } from 'react';
 import { weeklyProductionPlan as staticPlan, DailyProduction, ProductionBatch } from '../services/productionData';
 import { january2026 } from '../services/mealPlanData';
-import { getSubRecipesForDish } from '../services/authenticRecipes';
+import { getSubRecipesForDish, getAllRecipes } from '../services/authenticRecipes';
+import { subscribeToDataChanges, dataRelationshipStore } from '../services/dataRelationshipService';
 
 const ProductionPlan: React.FC = () => {
   const [selectedWorkDay, setSelectedWorkDay] = useState<string>('Mandag');
 
 
 
+  /* 
+    DYNAMIC PRODUCTION ENGINE v2.0
+    - Uses DataRelationshipStore to resolve sub-recipes and dependencies.
+    - Reacts to changes in the RecipeLibrary instantly.
+  */
+
+  // Trigger state for re-rendering when store updates
+  const [lastUpdate, setLastUpdate] = useState(new Date().getTime());
+
+  // Subscribe to store changes
+  React.useEffect(() => {
+    const unsubscribe = subscribeToDataChanges(() => {
+      console.log('ProductionPlan: Data updated, refreshing view...');
+      setLastUpdate(new Date().getTime());
+    });
+    return unsubscribe;
+  }, []);
+
   const generatedWeeklyPlan = useMemo(() => {
-    // Generate 5 days of production from January 2026 (assuming starting Jan 1st is close to a Monday for simulation)
-    // In reality we would find the current week. Here we take the first 5 entries.
-    const sourceDays = january2026.data.slice(0, 5);
+    // Generate 5 days of production from January 2026
+    const sourceDays = january2026.slice(0, 5);
     const daysMap = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag'];
 
     const dynamicPlan: DailyProduction[] = sourceDays.map((mealDay, index) => {
       const dayName = daysMap[index] || 'Lørdag';
       const batches: ProductionBatch[] = [];
 
-      // 1. Main Dish Batch
+      // 1. Resolve Main Dish from DataRelationshipStore (Authentic + User Overrides)
+      // We assume the mealDay.dish string matches a recipe name or ID.
+      // In a real scenario we'd fuzzy match, but for now we look for exact.
+      let mainRecipeId = 'UNKNOWN';
+      const allRecipes = getAllRecipes(); // Fallback to raw listing if not in graph (though store should have it)
+      // Ideally we query the store. The store is indexed by ID.
+      // For this demo, we assume we find the ID via name search if needed.
+
+      const match = allRecipes.find(r => r.recipeName === mealDay.dish) || { id: '100' + index };
+      mainRecipeId = match.id || match.recipeNumber;
+
       batches.push({
         id: `main-${index}`,
-        mdsId: '100' + index,
+        mdsId: mainRecipeId,
         name: mealDay.dish,
         type: 'Hovedret',
         quantity: '450 port.',
@@ -30,19 +58,42 @@ const ProductionPlan: React.FC = () => {
         time: '08:00'
       });
 
-      // 2. Sub-recipes for Main Dish
-      const subs = getSubRecipesForDish(mealDay.dish);
-      subs.forEach((subId, subIdx) => {
-        batches.push({
-          id: `sub-${index}-${subIdx}`,
-          mdsId: subId,
-          name: `Prep: ${subId} til ${mealDay.dish}`, // ideally we'd look up the sub-recipe name
-          type: 'Delopskrift',
-          quantity: 'Basis',
-          status: 'Planlagt',
-          time: '09:00'
+      // 2. Dynamic Sub-recipe Resolution via Graph Store
+      // getChildren returns { type, id }
+      const children = dataRelationshipStore.getChildren(mainRecipeId);
+      const subRecipes = children.filter(c => c.type === 'sub_recipe');
+
+      if (subRecipes.length > 0) {
+        subRecipes.forEach((sub, subIdx) => {
+          // Fetch details for the sub-recipe to get its name
+          const subDetails = dataRelationshipStore.getEntity(sub.id, 'recipe');
+          const subName = subDetails ? subDetails.recipeName : `Sub-recipe ${sub.id}`;
+
+          batches.push({
+            id: `sub-${index}-${subIdx}`,
+            mdsId: sub.id,
+            name: `Prep: ${subName}`,
+            type: 'Delopskrift',
+            quantity: 'Basis', // Could calculate dynamic scaling here based on parent yield
+            status: 'Planlagt',
+            time: '09:00'
+          });
         });
-      });
+      } else {
+        // Fallback to static mapping if relationship not yet defined in graph (for old data compatibility)
+        const staticSubs = getSubRecipesForDish(mealDay.dish);
+        staticSubs.forEach((subId, subIdx) => {
+          batches.push({
+            id: `sub-${index}-${subIdx}-static`,
+            mdsId: subId,
+            name: `Prep: ${subId}`,
+            type: 'Delopskrift',
+            quantity: 'Basis',
+            status: 'Planlagt',
+            time: '09:00'
+          });
+        });
+      }
 
       // 3. Bi-ret (Soup/Dessert)
       if (mealDay.biret) {
@@ -57,7 +108,7 @@ const ProductionPlan: React.FC = () => {
         });
       }
 
-      // 4. Vegetarian Option (Static placeholder for now, or derived)
+      // 4. Skeleton Vegetarian
       batches.push({
         id: `veg-${index}`,
         mdsId: '300' + index,
@@ -77,7 +128,7 @@ const ProductionPlan: React.FC = () => {
     });
 
     return dynamicPlan;
-  }, []);
+  }, [lastUpdate]); // Re-run when store updates
 
   const currentDayData = useMemo(() =>
     generatedWeeklyPlan.find(d => d.day === selectedWorkDay) || generatedWeeklyPlan[0]

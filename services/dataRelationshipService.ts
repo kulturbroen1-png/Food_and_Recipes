@@ -1,6 +1,7 @@
 import { RecipeData, SelectedComponent, MealDay, Ingredient } from '../types';
 import { saveUserRecipe, getUserRecipes } from './recipeStorage';
 import { getHorkramPrice } from './pricingService';
+import { getAllRecipes } from './authenticRecipes';
 
 // Central data store for relationships
 class DataRelationshipStore {
@@ -51,9 +52,11 @@ class DataRelationshipStore {
     }
 
     // Update entity and cascade changes
-    updateEntity(entityId: string, entityType: string, data: any) {
+    updateEntity(entityId: string, entityType: string, data: any, silent: boolean = false) {
         // Cache the data
         this.dataCache.set(`${entityType}:${entityId}`, data);
+
+        if (silent) return; // Stop cascading if silent update
 
         // Cascade updates based on entity type
         switch (entityType) {
@@ -82,18 +85,18 @@ class DataRelationshipStore {
                 // Find and update sub-recipe references
                 const subRecipeEntity = this.dataCache.get(`${DataRelationshipStore.ENTITY_TYPES.RECIPE}:${subRecipe.recipeNumber}`);
                 if (subRecipeEntity) {
-                    // Update sub-recipe with new parent reference
+                    // Update sub-recipe with new parent reference - SILENTLY to avoid loops
                     this.updateEntity(subRecipe.recipeNumber, DataRelationshipStore.ENTITY_TYPES.RECIPE, {
                         ...subRecipeEntity,
                         sourceReference: `Updated from ${recipe.recipeName}`
-                    });
+                    }, true);
                 }
             });
         }
 
         // Update ingredients
         recipe.ingredients.forEach(ingredient => {
-            this.updateEntity(ingredient.name, DataRelationshipStore.ENTITY_TYPES.INGREDIENT, ingredient);
+            this.updateEntity(ingredient.name, DataRelationshipStore.ENTITY_TYPES.INGREDIENT, ingredient, true);
         });
 
         // Update procurement lists that reference this recipe
@@ -131,6 +134,7 @@ class DataRelationshipStore {
                 );
 
                 // Collect all ingredients (main + sub-recipe) for calculations
+                // Collect all ingredients (main + sub-recipe) for calculations
                 const allIngredients = [...updatedIngredients];
 
                 // Calculate total weight from sub-recipes and main ingredients
@@ -167,7 +171,8 @@ class DataRelationshipStore {
 
                 // Save the updated recipe
                 saveUserRecipe(updatedRecipe);
-                this.updateEntity(recipeInfo.id, DataRelationshipStore.ENTITY_TYPES.RECIPE, updatedRecipe);
+                // Important: Update the store SILENTLY to prevent re-triggering cascade for this recipe
+                this.updateEntity(recipeInfo.id, DataRelationshipStore.ENTITY_TYPES.RECIPE, updatedRecipe, true);
             }
         });
     }
@@ -230,15 +235,31 @@ class DataRelationshipStore {
         return this.dataCache.get(`${entityType}:${entityId}`);
     }
 
-    // Initialize with existing data
     initialize() {
-        const recipes = getUserRecipes();
+        const userRecipes = getUserRecipes();
+        const authentic = getAllRecipes().map(r => ({
+            recipeName: r.recipeName,
+            recipeNumber: r.id, // Map authentic ID to recipeNumber
+            category: r.category,
+            ingredients: r.ingredients || [],
+            subRecipes: [], // Authentic recipes might not have subRecipes property structured same way initially
+            yield: { portions: "1", finishedWeightPerPortion: "0" }
+        }));
+
+        // Merge - User recipes take precedence if they edit an authentic one
+        const mergedMap = new Map();
+
+        authentic.forEach((r: any) => mergedMap.set(r.recipeNumber, r));
+        userRecipes.forEach(r => mergedMap.set(r.recipeNumber, r)); // Overwrite with user version
+
+        const recipes = Array.from(mergedMap.values());
+
         recipes.forEach(recipe => {
             this.updateEntity(recipe.recipeNumber, DataRelationshipStore.ENTITY_TYPES.RECIPE, recipe);
 
             // Register relationships
             if (recipe.subRecipes) {
-                recipe.subRecipes.forEach(subRecipe => {
+                recipe.subRecipes.forEach((subRecipe: any) => {
                     this.registerRelationship(
                         recipe.recipeNumber,
                         subRecipe.recipeNumber,
@@ -247,13 +268,15 @@ class DataRelationshipStore {
                 });
             }
 
-            recipe.ingredients.forEach(ingredient => {
-                this.registerRelationship(
-                    recipe.recipeNumber,
-                    ingredient.name,
-                    DataRelationshipStore.ENTITY_TYPES.INGREDIENT
-                );
-            });
+            if (recipe.ingredients) {
+                recipe.ingredients.forEach((ingredient: any) => {
+                    this.registerRelationship(
+                        recipe.recipeNumber,
+                        ingredient.name,
+                        DataRelationshipStore.ENTITY_TYPES.INGREDIENT
+                    );
+                });
+            }
         });
     }
 }
@@ -261,7 +284,7 @@ class DataRelationshipStore {
 // Singleton instance
 export const dataRelationshipStore = new DataRelationshipStore();
 
-// Initialize on import
+// Initialize on import or explicit call can remain
 dataRelationshipStore.initialize();
 
 // Helper functions

@@ -6,6 +6,8 @@ import BudgetDashboard from './components/BudgetDashboard';
 import PredictiveHealthDashboard from './components/PredictiveHealthDashboard';
 import ProductionPlan from './components/ProductionPlan';
 import FullMenuCard from './components/FullMenuCard';
+import YearlyMenuCard from './components/YearlyMenuCard';
+import MonthlyProductionPackage from './components/MonthlyProductionPackage';
 import MasterDataAdmin from './components/MasterDataAdmin';
 import { january2026 } from './services/mealPlanData';
 import { LayoutDashboard, Wand2, ChefHat, BookOpen, Wallet, Dna, ClipboardList, Calendar, Database } from 'lucide-react';
@@ -71,7 +73,7 @@ const Dashboard: React.FC = () => (
 );
 
 const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'ai-menu' | 'recipes' | 'kitchen' | 'budget' | 'health' | 'production' | 'full-menu' | 'admin'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'ai-menu' | 'recipes' | 'kitchen' | 'budget' | 'health' | 'production' | 'full-menu' | 'yearly-menu' | 'monthly-production' | 'admin'>('dashboard');
 
   // Placeholder handlers for Recipe Selector
   const handleRecipeSelect = (name: string, category: string) => {
@@ -94,6 +96,12 @@ const App: React.FC = () => {
           onClick={() => setActiveTab('full-menu')}
           icon={<Calendar size={20} />}
           label="Menu Card"
+        />
+        <NavButton
+          active={activeTab === 'yearly-menu'}
+          onClick={() => setActiveTab('yearly-menu')}
+          icon={<Calendar size={20} />}
+          label="Helårs Menu"
         />
         <NavButton
           active={activeTab === 'ai-menu'}
@@ -132,6 +140,12 @@ const App: React.FC = () => {
           onClick={() => setActiveTab('production')}
           icon={<ClipboardList size={20} />}
           label="Plan"
+        />
+        <NavButton
+          active={activeTab === 'monthly-production'}
+          onClick={() => setActiveTab('monthly-production')}
+          icon={<ClipboardList size={20} />}
+          label="Produktionspakke"
         />
         <div className="w-px h-6 bg-slate-700 mx-1"></div>
         <NavButton
@@ -175,6 +189,16 @@ const App: React.FC = () => {
         {activeTab === 'full-menu' && (
           <div className="max-w-[210mm] mx-auto">
             <FullMenuCard monthData={january2026} monthName="Januar" />
+          </div>
+        )}
+        {activeTab === 'yearly-menu' && (
+          <div className="max-w-[210mm] mx-auto">
+            <YearlyMenuCard />
+          </div>
+        )}
+        {activeTab === 'monthly-production' && (
+          <div className="max-w-[210mm] mx-auto">
+            <MonthlyProductionPackage />
           </div>
         )}
         {activeTab === 'admin' && (

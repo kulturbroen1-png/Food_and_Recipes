@@ -454,6 +454,3 @@ class PredictiveHealthService {
 
 // Export singleton instance
 export const predictiveHealthService = new PredictiveHealthService();
-
-// Export types and interfaces
-export type { PatientProfile, HealthPrediction, PersonalizedRecipe };

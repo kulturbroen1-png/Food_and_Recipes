@@ -317,7 +317,7 @@ const BudgetCalculator: React.FC<{ onClose?: () => void }> = ({ onClose }) => {
                                                 <div className="flex flex-wrap gap-2">
                                                     {Object.entries(cat.topIngredients).slice(0, 3).map(([ing, qty]) => (
                                                         <span key={ing} className="px-2 py-1 bg-slate-700 rounded text-xs text-slate-300">
-                                                            {ing} <span className="text-slate-500">({qty.toFixed(0)}kg)</span>
+                                                            {ing} <span className="text-slate-500">({(qty as number).toFixed(0)}kg)</span>
                                                         </span>
                                                     ))}
                                                 </div>

@@ -48,8 +48,8 @@ export const PORTION_STANDARDS: Record<string, PortionStandard> = {
     },
     'Soup (Main)': {
         component: 'Soup',
-        servedWeightGrams: 250,
-        description: 'Full meal soup served with bread'
+        servedWeightGrams: 200,
+        description: 'Full meal soup served with bread - Standard 200g whole year'
     },
     'Dessert': {
         component: 'Dessert',

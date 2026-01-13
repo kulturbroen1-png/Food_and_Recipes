@@ -118,3 +118,11 @@ export interface MealDay {
   biret: string;      // Suppe/Dessert/Kage
   isHoliday?: boolean;
 }
+
+export interface CalculatedIngredient {
+  name: string;
+  quantityGram: number;
+  bakersPercentage: number;
+  isFlour?: boolean;
+  substitutions?: string;
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-01-10T16:18:58.639Z",
+  "generatedAt": "2026-01-13T17:14:47.511Z",
   "standard": "2025_FULL_COMPLIANCE_V4",
   "portionsPerDay": 450,
   "yearSummary": {
@@ -1687,6 +1687,43 @@
           }
         },
         {
+          "dish": "Porretærte",
+          "proteinType": "Grøn",
+          "estimatedCost": 16949.11323529412,
+          "costBreakdown": {
+            "protein": 4500,
+            "carb": 7128.525000000001,
+            "vegetables": 1588.235294117647,
+            "sauce": 2382.3529411764707,
+            "biret": 1350
+          },
+          "compliance": {
+            "isProteinCompliant": false,
+            "isEnergyCompliant": false,
+            "isSeasonal": false,
+            "isCultural": true,
+            "issues": [
+              "Asparges: Hvide/grønne asparges er primært maj-juni.",
+              "Low Energy (< 2 MJ)",
+              "Low Protein (9.5g < 26g)",
+              "Low Fat/Energy Density (35 E% < 40%)",
+              "Sensory Imbalance (Mangler modspil)"
+            ]
+          },
+          "sensory": {
+            "mouthfeel": "Balanced",
+            "intensity": 0,
+            "textures": [],
+            "colors": [],
+            "isBalanced": false,
+            "score": 5
+          },
+          "meta": {
+            "shrinkageFactor": 0,
+            "rawWeight": 100
+          }
+        },
+        {
           "dish": "Ovnbagt Ørred",
           "proteinType": "Fisk",
           "estimatedCost": 16367.891795665635,
@@ -1718,43 +1755,6 @@
             "colors": [
               "Yellow/White"
             ],
-            "isBalanced": false,
-            "score": 5
-          },
-          "meta": {
-            "shrinkageFactor": 0,
-            "rawWeight": 100
-          }
-        },
-        {
-          "dish": "Porretærte",
-          "proteinType": "Grøn",
-          "estimatedCost": 16949.11323529412,
-          "costBreakdown": {
-            "protein": 4500,
-            "carb": 7128.525000000001,
-            "vegetables": 1588.235294117647,
-            "sauce": 2382.3529411764707,
-            "biret": 1350
-          },
-          "compliance": {
-            "isProteinCompliant": false,
-            "isEnergyCompliant": false,
-            "isSeasonal": false,
-            "isCultural": true,
-            "issues": [
-              "Asparges: Hvide/grønne asparges er primært maj-juni.",
-              "Low Energy (< 2 MJ)",
-              "Low Protein (9.5g < 26g)",
-              "Low Fat/Energy Density (35 E% < 40%)",
-              "Sensory Imbalance (Mangler modspil)"
-            ]
-          },
-          "sensory": {
-            "mouthfeel": "Balanced",
-            "intensity": 0,
-            "textures": [],
-            "colors": [],
             "isBalanced": false,
             "score": 5
           },
@@ -2256,6 +2256,42 @@
           }
         },
         {
+          "dish": "Ovnæggekage",
+          "proteinType": "Grøn",
+          "estimatedCost": 10664.338235294117,
+          "costBreakdown": {
+            "protein": 4500,
+            "carb": 843.75,
+            "vegetables": 1588.235294117647,
+            "sauce": 2382.3529411764707,
+            "biret": 1350
+          },
+          "compliance": {
+            "isProteinCompliant": false,
+            "isEnergyCompliant": false,
+            "isSeasonal": true,
+            "isCultural": true,
+            "issues": [
+              "Low Energy (< 2 MJ)",
+              "Low Protein (9.5g < 26g)",
+              "Low Fat/Energy Density (35 E% < 40%)",
+              "Sensory Imbalance (Mangler modspil)"
+            ]
+          },
+          "sensory": {
+            "mouthfeel": "Balanced",
+            "intensity": 0,
+            "textures": [],
+            "colors": [],
+            "isBalanced": false,
+            "score": 5
+          },
+          "meta": {
+            "shrinkageFactor": 0,
+            "rawWeight": 100
+          }
+        },
+        {
           "dish": "Stegt Ørred (Vejle)",
           "proteinType": "Fisk",
           "estimatedCost": 15650.001716146122,
@@ -2290,42 +2326,6 @@
             ],
             "isBalanced": true,
             "score": 10
-          },
-          "meta": {
-            "shrinkageFactor": 0,
-            "rawWeight": 100
-          }
-        },
-        {
-          "dish": "Ovnæggekage",
-          "proteinType": "Grøn",
-          "estimatedCost": 10664.338235294117,
-          "costBreakdown": {
-            "protein": 4500,
-            "carb": 843.75,
-            "vegetables": 1588.235294117647,
-            "sauce": 2382.3529411764707,
-            "biret": 1350
-          },
-          "compliance": {
-            "isProteinCompliant": false,
-            "isEnergyCompliant": false,
-            "isSeasonal": true,
-            "isCultural": true,
-            "issues": [
-              "Low Energy (< 2 MJ)",
-              "Low Protein (9.5g < 26g)",
-              "Low Fat/Energy Density (35 E% < 40%)",
-              "Sensory Imbalance (Mangler modspil)"
-            ]
-          },
-          "sensory": {
-            "mouthfeel": "Balanced",
-            "intensity": 0,
-            "textures": [],
-            "colors": [],
-            "isBalanced": false,
-            "score": 5
           },
           "meta": {
             "shrinkageFactor": 0,
