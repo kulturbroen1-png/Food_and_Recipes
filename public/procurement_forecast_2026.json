@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-01-11T10:30:39.050Z",
+  "source": "Hørsholm Kommune / Hørkram 2025 (K2)",
+  "totalCost2025": 5403720.61297823,
+  "totalCost2026": 5691332.084344214,
+  "overallInflation": 5.3224711632059885,
+  "categories": [
+    {
+      "category": "Okse/Kalv",
+      "totalKg": 4626.346153846154,
+      "cost2025": 548670.7748076923,
+      "cost2026": 603537.8522884615,
+      "inflationRate": 1.1,
+      "topIngredients": {
+        "Okse (Basis)": 4626
+      }
+    },
+    {
+      "category": "Svin",
+      "totalKg": 6980.743006993008,
+      "cost2025": 381346.1783933002,
+      "cost2026": 396600.0255290322,
+      "inflationRate": 1.04,
+      "topIngredients": {
+        "Gris (Basis)": 6891,
+        "Bacon/Løg": 45,
+        "Baconknas": 45
+      }
+    },
+    {
+      "category": "Fjerkræ",
+      "totalKg": 7942.5,
+      "cost2025": 1491950.969999998,
+      "cost2026": 1581468.028199998,
+      "inflationRate": 1.06,
+      "topIngredients": {
+        "Fjerkræ (Basis)": 7943
+      }
+    },
+    {
+      "category": "Fisk",
+      "totalKg": 4595.151000000001,
+      "cost2025": 255862.602831,
+      "cost2026": 276331.61105748004,
+      "inflationRate": 1.08,
+      "topIngredients": {
+        "Fisk (Basis)": 3105,
+        "Fiskefars": 1490
+      }
+    },
+    {
+      "category": "Mejeri/Ost",
+      "totalKg": 7533,
+      "cost2025": 130042.24972920744,
+      "cost2026": 140445.62970754405,
+      "inflationRate": 1.08,
+      "topIngredients": {
+        "Piskefløde/Smør": 6228,
+        "Flødekart.": 810,
+        "Flødekartofler": 270,
+        "Råkost": 180,
+        "Creme fraiche": 45
+      }
+    },
+    {
+      "category": "Grønt/Frugt",
+      "totalKg": 28424.498999999985,
+      "cost2025": 961283.2614077518,
+      "cost2026": 1009347.4244781395,
+      "inflationRate": 1.05,
+      "topIngredients": {
+        "Kartofler": 16560,
+        "Grøn (Basis)": 3375,
+        "Persille": 990,
+        "Tomat": 810,
+        "Kartoffelmos": 720
+      }
+    },
+    {
+      "category": "Kolonial/Diverse",
+      "totalKg": 20340,
+      "cost2025": 1634564.5758092802,
+      "cost2026": 1683601.5130835585,
+      "inflationRate": 1.03,
+      "topIngredients": {
+        "Ris": 4050,
+        "Rugbrød": 1800,
+        "-": 1755,
+        "Mos": 1620,
+        "Tarteletter": 1350
+      }
+    },
+    {
+      "category": "Frost",
+      "totalKg": 0,
+      "cost2025": 0,
+      "cost2026": 0,
+      "inflationRate": 1.04,
+      "topIngredients": {}
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "breelteparken-køkken-management-pro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "ingest": "ts-node --esm scripts/ingestRecipes.ts",
+    "dedupe": "ts-node --esm scripts/deduplicateRecipes.ts",
+    "extract": "ts-node --esm scripts/extractRecipes.ts",
+    "extract-prices": "ts-node --esm scripts/extractPrices.ts",
+    "calculate-costs": "ts-node --esm scripts/calculateCosts.ts",
+    "analyze-menus": "ts-node --esm scripts/analyzeMenuCards.ts"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "^1.4.0",
+    "@google/genai": "^1.7.0",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.3",
+    "exceljs": "^4.4.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.0.0",
+    "lucide-react": "^0.562.0",
+    "mammoth": "^1.8.0",
+    "pdf-parse": "^2.4.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

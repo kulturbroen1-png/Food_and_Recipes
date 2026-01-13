@@ -1,0 +1,8 @@
+{
+  "name": "Breelteparken Køkken Management Pro",
+  "description": "Avanceret produktionsstyring med AI-drevet stemmestyring, video-generering og Master Diætist integration.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}

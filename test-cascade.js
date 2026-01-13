@@ -1,0 +1,1 @@
+const testData = JSON.parse(localStorage.getItem('breelte_user_recipes') || '[]'); console.log('Recipes found:', testData.length); testData.forEach(r => console.log(r.recipeName, '- Sub-recipes:', r.subRecipes?.length || 0));
