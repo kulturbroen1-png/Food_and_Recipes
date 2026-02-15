@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breelteparken Køkken Management Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Global Button Interactivity Enhancements */
+    button {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+
+    button:hover:not(:disabled) {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    button:active:not(:disabled) {
+      transform: translateY(0) scale(0.97);
+      filter: brightness(0.94);
+      box-shadow: none !important;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+    /* Print Styles - A4 Landscape Optimization */
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 0;
+      }
+
+      body {
+        background-color: white !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color: black !important;
+      }
+
+      .no-print, header, nav, .no-print-bg {
+        display: none !important;
+      }
+
+      .printable-area {
+        page-break-after: always !important;
+        overflow: hidden !important;
+        visibility: visible !important;
+        display: block !important;
+        box-shadow: none !important;
+        border: none !important;
+      }
+      
+      /* Reset interactive elements for print */
+      a, button {
+        text-decoration: none !important;
+      }
+    }
+  </style>
+
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.7.0",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom": "https://esm.sh/react-dom@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.0/client",
+    "jspdf": "https://esm.sh/jspdf@^3.0.4",
+    "html2canvas": "https://esm.sh/html2canvas@^1.4.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "mammoth": "https://esm.sh/mammoth@^1.8.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/Food_and_Recipes/assets/index-EcfkwtOd.js"></script>
+  <link rel="stylesheet" crossorigin href="/Food_and_Recipes/assets/index-CzKI01xF.css">
+</head>
+<body class="min-h-screen">
+  <div id="root"></div>
+</body>
+</html>

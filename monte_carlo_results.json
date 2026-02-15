@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-01-10T16:33:25.181Z",
+  "iterations": 10000,
+  "baseline": 9082361.905385906,
+  "p50_Median": 9092300.140028663,
+  "p90_RiskAdjusted": 9859190.803775772,
+  "p99_WorstCase": 10503736.415709177,
+  "min": 7127758.373991093,
+  "max": 11402026.343900183,
+  "volatilityParams": {
+    "MEAT": 0.15,
+    "FISH": 0.12,
+    "DAIRY_VEG": 0.08,
+    "SHELF": 0.05,
+    "DYSPHAGIA_POP": 0.1
+  }
+}

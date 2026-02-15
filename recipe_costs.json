@@ -1,0 +1,655 @@
+[
+  {
+    "recipeName": "Skipperlabskovs",
+    "portions": 450,
+    "components": [
+      {
+        "title": "Skipperlabskovs",
+        "ingredients": [
+          {
+            "name": "Oksebov",
+            "quantityKg": 116,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Bagekartofler",
+            "quantityKg": 84.4,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Løg",
+            "quantityKg": 17,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Smør",
+            "quantityKg": 5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Laurbærblade",
+            "quantityKg": 0.06,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Hele peberkorn",
+            "quantityKg": 0.25,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Salt",
+            "quantityKg": 0,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Vand",
+            "quantityKg": 0,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      }
+    ],
+    "totalCost": 0,
+    "costPerPortion": 0
+  },
+  {
+    "recipeName": "Sprængt Kylling med Peberrodssauce",
+    "portions": 450,
+    "components": [
+      {
+        "title": "Sprængt Kylling",
+        "ingredients": [
+          {
+            "name": "Hel kylling",
+            "quantityKg": 103,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Vand",
+            "quantityKg": 141,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Groft salt",
+            "quantityKg": 11,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Sukker",
+            "quantityKg": 3.9,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Gulerødder",
+            "quantityKg": 24.7,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Blegselleri",
+            "quantityKg": 11.1,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Porrer",
+            "quantityKg": 6.7,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      },
+      {
+        "title": "Peberrodssauce & Tilbehør",
+        "ingredients": [
+          {
+            "name": "Smør",
+            "quantityKg": 2.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Hvedemel",
+            "quantityKg": 2.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Kyllingefond (fra kogning)",
+            "quantityKg": 25,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Piskefløde",
+            "quantityKg": 5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Friskrevet Peberrod",
+            "quantityKg": 2,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Kartofler",
+            "quantityKg": 112.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Gulerødder (tilbehør)",
+            "quantityKg": 21.2,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      }
+    ],
+    "totalCost": 0,
+    "costPerPortion": 0
+  },
+  {
+    "recipeName": "Bagte Ørred med Spinatcreme",
+    "portions": 450,
+    "components": [
+      {
+        "title": "Bagte Ørred",
+        "ingredients": [
+          {
+            "name": "Ørredfilet m. skind",
+            "quantityKg": 140.6,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Smør",
+            "quantityKg": 1,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Citronsaft",
+            "quantityKg": 0.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Salt, peber, dild",
+            "quantityKg": 0,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      },
+      {
+        "title": "Spinatcreme & Tilbehør",
+        "ingredients": [
+          {
+            "name": "Spinat (hakket, frost)",
+            "quantityKg": 25,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Piskefløde",
+            "quantityKg": 20,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Løg",
+            "quantityKg": 2.35,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Kartofler",
+            "quantityKg": 84.4,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Rødløg (til pynt)",
+            "quantityKg": 5.9,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      }
+    ],
+    "totalCost": 0,
+    "costPerPortion": 0
+  },
+  {
+    "recipeName": "Pastinakpostej med Ratatouille",
+    "portions": 450,
+    "components": [
+      {
+        "title": "Pastinakpostej",
+        "ingredients": [
+          {
+            "name": "Pastinak",
+            "quantityKg": 69,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Kartofler",
+            "quantityKg": 27.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Røde linser, tørre",
+            "quantityKg": 15,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Æg (masse)",
+            "quantityKg": 11,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Rasp",
+            "quantityKg": 7,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Løg",
+            "quantityKg": 6,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Timian, salt, peber",
+            "quantityKg": 0,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      },
+      {
+        "title": "Ratatouille & Servering",
+        "ingredients": [
+          {
+            "name": "Løg",
+            "quantityKg": 29.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Aubergine",
+            "quantityKg": 31.3,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Squash",
+            "quantityKg": 31.3,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Peberfrugt (mix)",
+            "quantityKg": 31.3,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Hakkede tomater",
+            "quantityKg": 20,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Olivenolie, hvidløg, urter",
+            "quantityKg": 0,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      }
+    ],
+    "totalCost": 0,
+    "costPerPortion": 0
+  },
+  {
+    "recipeName": "Pølse med Krydderurter, Løgsovs og Kartoffelmos",
+    "portions": 450,
+    "components": [
+      {
+        "title": "Pølse & Løgsovs",
+        "ingredients": [
+          {
+            "name": "Krydderurtepølser",
+            "quantityKg": 90,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Løg (til sovs)",
+            "quantityKg": 20,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Smør (til sovs)",
+            "quantityKg": 3.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Hvedemel (til sovs)",
+            "quantityKg": 3.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Okse-/hønsebouillon",
+            "quantityKg": 35,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Piskefløde (til sovs)",
+            "quantityKg": 3.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      },
+      {
+        "title": "Kartoffelmos & Servering",
+        "ingredients": [
+          {
+            "name": "Kartofler (melet sort)",
+            "quantityKg": 112.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Smør",
+            "quantityKg": 9,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Sødmælk",
+            "quantityKg": 18,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      }
+    ],
+    "totalCost": 0,
+    "costPerPortion": 0
+  },
+  {
+    "recipeName": "Paprikagryde med Bønner & Selleri (Vegetar)",
+    "portions": 450,
+    "components": [
+      {
+        "title": "Paprikagryde",
+        "ingredients": [
+          {
+            "name": "Tørrede bønner (f.eks. hvide bønner)",
+            "quantityKg": 40,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Løg",
+            "quantityKg": 23.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Champignon",
+            "quantityKg": 31.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Knoldselleri",
+            "quantityKg": 26.7,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Peberfrugt, rød",
+            "quantityKg": 23.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Smør/Olie",
+            "quantityKg": 5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Paprika, edelsüss",
+            "quantityKg": 1.5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Tomatpuré",
+            "quantityKg": 5,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Hakkede tomater",
+            "quantityKg": 15,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Piskefløde",
+            "quantityKg": 20,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Grøntsagsbouillon",
+            "quantityKg": 30,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      }
+    ],
+    "totalCost": 0,
+    "costPerPortion": 0
+  },
+  {
+    "recipeName": "Oksesteg med Rødvinssauce & Glaserede Perleløg",
+    "portions": 450,
+    "components": [
+      {
+        "title": "Oksesteg",
+        "ingredients": [
+          {
+            "name": "Oksekød (tykkam, bov)",
+            "quantityKg": 90,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Løg",
+            "quantityKg": 11.8,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Gulerødder",
+            "quantityKg": 11.8,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Knoldselleri",
+            "quantityKg": 6.7,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Rødvin",
+            "quantityKg": 15,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Oksebouillon",
+            "quantityKg": 20,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      },
+      {
+        "title": "Sauce & Tilbehør",
+        "ingredients": [
+          {
+            "name": "Piskefløde (til sauce)",
+            "quantityKg": 7,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Tyttebærsyltetøj",
+            "quantityKg": 0.7,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Perleløg",
+            "quantityKg": 16.9,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Sukker (til løg)",
+            "quantityKg": 1,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          },
+          {
+            "name": "Kartofler",
+            "quantityKg": 84.4,
+            "pricePerKg": null,
+            "totalCost": null,
+            "matchedProduct": null
+          }
+        ],
+        "componentCost": 0
+      }
+    ],
+    "totalCost": 0,
+    "costPerPortion": 0
+  }
+]

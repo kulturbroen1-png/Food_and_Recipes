@@ -1,0 +1,666 @@
+[
+  {
+    "recipeName": "Skipperlabskovs",
+    "date": "05. januar",
+    "portions": "450",
+    "totalWeight": "",
+    "portionSize": "",
+    "protein": "",
+    "carbohydrate": "",
+    "source": "",
+    "components": [
+      {
+        "title": "Skipperlabskovs",
+        "ingredients": [
+          {
+            "name": "Oksebov",
+            "grossQuantity": "~116 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "116 kg"
+          },
+          {
+            "name": "Bagekartofler",
+            "grossQuantity": "~84.4 kg",
+            "wastePercentage": "~20%",
+            "nettoQuantity": "67.5 kg"
+          },
+          {
+            "name": "Løg",
+            "grossQuantity": "~17 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "14.4 kg"
+          },
+          {
+            "name": "Smør",
+            "grossQuantity": "5 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "5 kg"
+          },
+          {
+            "name": "Laurbærblade",
+            "grossQuantity": "~60 g",
+            "wastePercentage": "0%",
+            "nettoQuantity": "~60 g"
+          },
+          {
+            "name": "Hele peberkorn",
+            "grossQuantity": "~250 g",
+            "wastePercentage": "0%",
+            "nettoQuantity": "~250 g"
+          },
+          {
+            "name": "Salt",
+            "grossQuantity": "-",
+            "wastePercentage": "-",
+            "nettoQuantity": "Efter smag"
+          },
+          {
+            "name": "Vand",
+            "grossQuantity": "Rigeligt",
+            "wastePercentage": "-",
+            "nettoQuantity": "-"
+          }
+        ],
+        "steps": [
+          "Forberedelse: Skær okseboven i tern (2x2 cm). Skræl kartofler og løg. Skær kartoflerne i grove tern og hak løgene.",
+          "Kog Labskovsen: Kom det rå oksekød, løg, kartofler, laurbærblade og peberkorn i store kipstegere. Tilsæt vand, så det netop dækker ingredienserne.",
+          "Bring det i kog, skru ned for varmen, og lad det simre under låg i 2-3 timer, til kødet er helt mørt og kartoflerne er kogt ud til en grov mos. Rør jævnligt for at undgå, at det brænder på.",
+          "Afslutning: Fjern laurbærbladene. Monter labskovsen ved at piske koldt smør i. Smag til med rigeligt salt og friskkværnet peber. Forvent ca. 25-30% vægttab under tilberedning (svind fra kød og fordampning).",
+          "Servering: Server den varme skipperlabskovs (ca. 450g) med en sideportion rugbrød og syltede rødbeder."
+        ]
+      }
+    ]
+  },
+  {
+    "recipeName": "Sprængt Kylling med Peberrodssauce",
+    "date": "06. januar",
+    "portions": "450",
+    "totalWeight": "",
+    "portionSize": "",
+    "protein": "",
+    "carbohydrate": "",
+    "source": "",
+    "components": [
+      {
+        "title": "Sprængt Kylling",
+        "ingredients": [
+          {
+            "name": "Hel kylling",
+            "grossQuantity": "~103 kg",
+            "wastePercentage": "~30%",
+            "nettoQuantity": "72 kg (kogt kød)"
+          },
+          {
+            "name": "Vand",
+            "grossQuantity": "~141 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "~141 L"
+          },
+          {
+            "name": "Groft salt",
+            "grossQuantity": "~11 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "~11 kg"
+          },
+          {
+            "name": "Sukker",
+            "grossQuantity": "~3.9 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "~3.9 kg"
+          },
+          {
+            "name": "Gulerødder",
+            "grossQuantity": "~24.7 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "~21 kg"
+          },
+          {
+            "name": "Blegselleri",
+            "grossQuantity": "~11.1 kg",
+            "wastePercentage": "~10%",
+            "nettoQuantity": "~10 kg"
+          },
+          {
+            "name": "Porrer",
+            "grossQuantity": "~6.7 kg",
+            "wastePercentage": "~10%",
+            "nettoQuantity": "~6 kg"
+          }
+        ],
+        "steps": [
+          "Saltlage: Kog vand, salt og sukker op. Køl helt ned. Læg kyllingerne i lagen i 12-24 timer.",
+          "Kogning: Skyl kyllingerne. Kog i frisk vand med groftskårne aromater i ca. 1 time (kernetemperatur 75°C). Forvent 30% svind for hele kyllingen, og 50% af rå vægt er spiseligt kød.",
+          "Partering: Lad hvile. Parter kyllingerne til portionsstykker (ca. 160g kød pr. portion)."
+        ]
+      },
+      {
+        "title": "Peberrodssauce & Tilbehør",
+        "ingredients": [
+          {
+            "name": "Smør",
+            "grossQuantity": "2.5 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "2.5 kg"
+          },
+          {
+            "name": "Hvedemel",
+            "grossQuantity": "2.5 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "2.5 kg"
+          },
+          {
+            "name": "Kyllingefond (fra kogning)",
+            "grossQuantity": "25 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "25 L"
+          },
+          {
+            "name": "Piskefløde",
+            "grossQuantity": "5 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "5 L"
+          },
+          {
+            "name": "Friskrevet Peberrod",
+            "grossQuantity": "~2 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "~2 kg"
+          },
+          {
+            "name": "Kartofler",
+            "grossQuantity": "~112.5 kg",
+            "wastePercentage": "~20%",
+            "nettoQuantity": "90 kg"
+          },
+          {
+            "name": "Gulerødder (tilbehør)",
+            "grossQuantity": "~21.2 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "18 kg"
+          }
+        ],
+        "steps": [
+          "Peberrodssauce: Lav en opbagt sauce af smør, mel og siede kyllingefond. Kog igennem, tilsæt fløde. Smag til med friskrevet peberrod, salt, og lidt sukker/citronsaft. Tilsæt peberrod lige inden servering (ca. 50g pr. portion).",
+          "Tilbehør: Kog kartoflerne møre (ca. 200g pr. portion). Damp/kog gulerødderne (ca. 40g pr. portion).",
+          "Servering: Anret 160g kogt kyllingekød med 200g kogte kartofler, 50g peberrodssauce og 40g gulerødder."
+        ]
+      }
+    ]
+  },
+  {
+    "recipeName": "Bagte Ørred med Spinatcreme",
+    "date": "07. januar",
+    "portions": "450",
+    "totalWeight": "",
+    "portionSize": "",
+    "protein": "",
+    "carbohydrate": "",
+    "source": "",
+    "components": [
+      {
+        "title": "Bagte Ørred",
+        "ingredients": [
+          {
+            "name": "Ørredfilet m. skind",
+            "grossQuantity": "~140.6 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "140.6 kg"
+          },
+          {
+            "name": "Smør",
+            "grossQuantity": "1 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "1 kg"
+          },
+          {
+            "name": "Citronsaft",
+            "grossQuantity": "500 g",
+            "wastePercentage": "0%",
+            "nettoQuantity": "500 g"
+          },
+          {
+            "name": "Salt, peber, dild",
+            "grossQuantity": "-",
+            "wastePercentage": "-",
+            "nettoQuantity": "Efter smag"
+          }
+        ],
+        "steps": [
+          "Smør gastrobakker eller fade.",
+          "Læg ørredfileterne på bakkerne med skindsiden nedad.",
+          "Fordel små klatter smør, citronsaft, salt, peber og frisk dild over fisken.",
+          "Bag fisken i ovnen ved 180°C i ca. 12-15 minutter, eller indtil den er netop gennemtilberedt (kernetemperatur ~60°C). Forvent ca. 20% svind ved bagning."
+        ]
+      },
+      {
+        "title": "Spinatcreme & Tilbehør",
+        "ingredients": [
+          {
+            "name": "Spinat (hakket, frost)",
+            "grossQuantity": "25 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "25 kg"
+          },
+          {
+            "name": "Piskefløde",
+            "grossQuantity": "20 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "20 L"
+          },
+          {
+            "name": "Løg",
+            "grossQuantity": "~2.35 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "2 kg"
+          },
+          {
+            "name": "Kartofler",
+            "grossQuantity": "~84.4 kg",
+            "wastePercentage": "~20%",
+            "nettoQuantity": "67.5 kg"
+          },
+          {
+            "name": "Rødløg (til pynt)",
+            "grossQuantity": "~5.9 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "5 kg"
+          }
+        ],
+        "steps": [
+          "Spinatcreme: Optø spinaten og pres væsken fra. Sautér finthakkede løg, tilsæt spinat og derefter piskefløde. Kog ind til cremet konsistens. Smag til med muskatnød, salt og peber (ca. 50g pr. portion).",
+          "Tilbehør: Kog kartoflerne møre (ca. 150g pr. portion). Skær rødløg i tynde skiver til pynt (ca. 20g pr. portion).",
+          "Servering: Anret den bagte ørred (ca. 250g) på en bund af spinatcreme. Server med kogte kartofler og pynt med friske rødløg."
+        ]
+      }
+    ]
+  },
+  {
+    "recipeName": "Pastinakpostej med Ratatouille",
+    "date": "08. januar",
+    "portions": "450",
+    "totalWeight": "",
+    "portionSize": "",
+    "protein": "",
+    "carbohydrate": "",
+    "source": "",
+    "components": [
+      {
+        "title": "Pastinakpostej",
+        "ingredients": [
+          {
+            "name": "Pastinak",
+            "grossQuantity": "~69 kg",
+            "wastePercentage": "~20%",
+            "nettoQuantity": "55 kg"
+          },
+          {
+            "name": "Kartofler",
+            "grossQuantity": "~27.5 kg",
+            "wastePercentage": "~20%",
+            "nettoQuantity": "22 kg"
+          },
+          {
+            "name": "Røde linser, tørre",
+            "grossQuantity": "15 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "15 kg"
+          },
+          {
+            "name": "Æg (masse)",
+            "grossQuantity": "11 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "11 L"
+          },
+          {
+            "name": "Rasp",
+            "grossQuantity": "7 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "7 kg"
+          },
+          {
+            "name": "Løg",
+            "grossQuantity": "~6 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "~5 kg"
+          },
+          {
+            "name": "Timian, salt, peber",
+            "grossQuantity": "-",
+            "wastePercentage": "-",
+            "nettoQuantity": "Efter smag"
+          }
+        ],
+        "steps": [
+          "Forbered: Udblød og kog de tørre røde linser møre. Skræl og kog pastinak og kartofler møre. Hak løgene fint.",
+          "Lav Fars: Mos de kogte grøntsager groft. Tilsæt de kogte linser, hakkede løg, æg, rasp og krydderier. Rør farsen godt sammen.",
+          "Bagning: Fordel farsen i smurte gastrobakker (ca. 5-6 cm højt).",
+          "Bag ved 160°C in ca. 1 time, eller til postejen er fast og gylden. Kernetemperaturen skal være mindst 75°C. Forvent ca. 15% svind.",
+          "Vigtigt: Afkøl postejen helt (gerne til næste dag på køl) før den skæres i skiver. Ellers vil den smuldre."
+        ]
+      },
+      {
+        "title": "Ratatouille & Servering",
+        "ingredients": [
+          {
+            "name": "Løg",
+            "grossQuantity": "~29.5 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "25 kg"
+          },
+          {
+            "name": "Aubergine",
+            "grossQuantity": "~31.3 kg",
+            "wastePercentage": "~10%",
+            "nettoQuantity": "28 kg"
+          },
+          {
+            "name": "Squash",
+            "grossQuantity": "~31.3 kg",
+            "wastePercentage": "~10%",
+            "nettoQuantity": "28 kg"
+          },
+          {
+            "name": "Peberfrugt (mix)",
+            "grossQuantity": "~31.3 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "26.5 kg"
+          },
+          {
+            "name": "Hakkede tomater",
+            "grossQuantity": "20 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "20 kg"
+          },
+          {
+            "name": "Olivenolie, hvidløg, urter",
+            "grossQuantity": "-",
+            "wastePercentage": "-",
+            "nettoQuantity": "Efter smag"
+          }
+        ],
+        "steps": [
+          "Ratatouille: Skær alle grøntsager i grove tern. Sauter them i etaper i olivenolie in store kipstegere. Start med løg, tilsæt så aubergine, squash og til sidst peberfrugt.",
+          "Tilsæt hvidløg, hakkede tomater og krydderurter (timian, rosmarin). Lad det simre in 30-40 minutter til en tyk, sammenkogt gryderet. Smag til. Forvent ca. 30% reduktion af vægt/volumen.",
+          "Servering: Lun de kolde, udskårne skiver af pastinakpostej let in ovnen. Anret en skive postej (ca. 217g) med en generøs portion varm ratatouille (ca. 198g)."
+        ]
+      }
+    ]
+  },
+  {
+    "recipeName": "Pølse med Krydderurter, Løgsovs og Kartoffelmos",
+    "date": "09. januar",
+    "portions": "450",
+    "totalWeight": "",
+    "portionSize": "",
+    "protein": "",
+    "carbohydrate": "",
+    "source": "",
+    "components": [
+      {
+        "title": "Pølse & Løgsovs",
+        "ingredients": [
+          {
+            "name": "Krydderurtepølser",
+            "grossQuantity": "90 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "90 kg"
+          },
+          {
+            "name": "Løg (til sovs)",
+            "grossQuantity": "~20 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "17 kg"
+          },
+          {
+            "name": "Smør (til sovs)",
+            "grossQuantity": "3.5 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "3.5 kg"
+          },
+          {
+            "name": "Hvedemel (til sovs)",
+            "grossQuantity": "3.5 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "3.5 kg"
+          },
+          {
+            "name": "Okse-/hønsebouillon",
+            "grossQuantity": "35 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "35 L"
+          },
+          {
+            "name": "Piskefløde (til sovs)",
+            "grossQuantity": "3.5 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "3.5 L"
+          }
+        ],
+        "steps": [
+          "Steg Pølser: Steg pølserne på pander eller i ovn til de er gyldne og gennemstegte. Forvent ca. 10% svind. (ca. 180g pr. portion).",
+          "Lav Løgsovs: Skær løgene i tynde skiver og sauter dem i smør i en stor gryde til de er helt bløde og karamelliserede. Tilsæt mel og lav en opbagning. Tilsæt gradvist den varme bouillon under piskning. Kog sovsen igennem in 10-15 minutter. Tilsæt fløde og smag til med salt og peber (ca. 90g pr. portion)."
+        ]
+      },
+      {
+        "title": "Kartoffelmos & Servering",
+        "ingredients": [
+          {
+            "name": "Kartofler (melet sort)",
+            "grossQuantity": "~112.5 kg",
+            "wastePercentage": "~20%",
+            "nettoQuantity": "90 kg"
+          },
+          {
+            "name": "Smør",
+            "grossQuantity": "9 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "9 kg"
+          },
+          {
+            "name": "Sødmælk",
+            "grossQuantity": "18 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "18 L"
+          }
+        ],
+        "steps": [
+          "Lav Kartoffelmos: Kog de skrællede kartofler møre, damp them tørre og mos dem. Pisk med varm mælk og smør til en luftig konsistens. Smag til med salt og hvid peber (ca. 200g pr. portion).",
+          "Servering: Anret 180g pølse med 200g kartoffelmos og 70g løgsovs."
+        ]
+      }
+    ]
+  },
+  {
+    "recipeName": "Paprikagryde med Bønner & Selleri (Vegetar)",
+    "date": "10. januar",
+    "portions": "450",
+    "totalWeight": "",
+    "portionSize": "",
+    "protein": "",
+    "carbohydrate": "",
+    "source": "",
+    "components": [
+      {
+        "title": "Paprikagryde",
+        "ingredients": [
+          {
+            "name": "Tørrede bønner (f.eks. hvide bønner)",
+            "grossQuantity": "40 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "40 kg"
+          },
+          {
+            "name": "Løg",
+            "grossQuantity": "~23.5 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "20 kg"
+          },
+          {
+            "name": "Champignon",
+            "grossQuantity": "~31.5 kg",
+            "wastePercentage": "~5%",
+            "nettoQuantity": "30 kg"
+          },
+          {
+            "name": "Knoldselleri",
+            "grossQuantity": "~26.7 kg",
+            "wastePercentage": "~25%",
+            "nettoQuantity": "20 kg"
+          },
+          {
+            "name": "Peberfrugt, rød",
+            "grossQuantity": "~23.5 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "20 kg"
+          },
+          {
+            "name": "Smør/Olie",
+            "grossQuantity": "5 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "5 kg"
+          },
+          {
+            "name": "Paprika, edelsüss",
+            "grossQuantity": "1.5 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "1.5 kg"
+          },
+          {
+            "name": "Tomatpuré",
+            "grossQuantity": "5 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "5 kg"
+          },
+          {
+            "name": "Hakkede tomater",
+            "grossQuantity": "15 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "15 kg"
+          },
+          {
+            "name": "Piskefløde",
+            "grossQuantity": "20 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "20 L"
+          },
+          {
+            "name": "Grøntsagsbouillon",
+            "grossQuantity": "~30 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "~30 L"
+          }
+        ],
+        "steps": [
+          "Forbered Bønner: Udblød de tørre bønner natten over. Kog dem møre i friskt, usaltet vand og sæt til side.",
+          "Forbered Grøntsager: Rens alle grøntsager og skær dem i passende tern (ca. 1x1 cm).",
+          "Sauter: Smelt smør/olie in store kipstegere. Sauter løg til de er klare. Tilsæt selleri og champignon og steg til de er gyldne. Tilsæt til sidst peberfrugt og steg et par minutter.",
+          "Lav Saucen: Tilsæt paprika og tomatpuré til grøntsagerne og svits det med in 2-3 minutter.",
+          "Tilsæt hakkede tomater, bouillon og piskefløde. Kog saucen op og lad den simre in 20 minutter.",
+          "Saml Retten: Tilsæt de forkogte bønner til saucen og varm det hele godt igennem. Smag til med salt, peber og evt. et nip sukker.",
+          "Servering: Server den varme paprikagryde (ca. 400g) med ris eller en grov kartoffelmos."
+        ]
+      }
+    ]
+  },
+  {
+    "recipeName": "Oksesteg med Rødvinssauce & Glaserede Perleløg",
+    "date": "11. januar",
+    "portions": "450",
+    "totalWeight": "",
+    "portionSize": "",
+    "protein": "",
+    "carbohydrate": "",
+    "source": "",
+    "components": [
+      {
+        "title": "Oksesteg",
+        "ingredients": [
+          {
+            "name": "Oksekød (tykkam, bov)",
+            "grossQuantity": "90 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "90 kg"
+          },
+          {
+            "name": "Løg",
+            "grossQuantity": "~11.8 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "10 kg"
+          },
+          {
+            "name": "Gulerødder",
+            "grossQuantity": "~11.8 kg",
+            "wastePercentage": "~15%",
+            "nettoQuantity": "10 kg"
+          },
+          {
+            "name": "Knoldselleri",
+            "grossQuantity": "~6.7 kg",
+            "wastePercentage": "~25%",
+            "nettoQuantity": "5 kg"
+          },
+          {
+            "name": "Rødvin",
+            "grossQuantity": "15 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "15 L"
+          },
+          {
+            "name": "Oksebouillon",
+            "grossQuantity": "~20 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "~20 L"
+          }
+        ],
+        "steps": [
+          "Forbered Steg: Dup kødet tørt. Krydr grundigt med salt og peber.",
+          "Bruning & Braisering: Brun stegene på alle sider in store kipstegere. Tag op. Svits groftskårne løg, gulerødder og selleri in samme gryde.",
+          "Læg stegene tilbage ovenpå grøntsagerne. Tilsæt rødvin, bouillon og krydderurter (laurbærblade, timian).",
+          "Bring i kog, skru ned og lad det simre under låg in 2.5 - 3 timer, til kødet er helt mørt (kernetemperatur ~85°C). Forvent ca. 30% svind.",
+          "Lad stegene hvile tildækket in mindst 30 minutter før udskæring."
+        ]
+      },
+      {
+        "title": "Sauce & Tilbehør",
+        "ingredients": [
+          {
+            "name": "Piskefløde (til sauce)",
+            "grossQuantity": "7 L",
+            "wastePercentage": "0%",
+            "nettoQuantity": "7 L"
+          },
+          {
+            "name": "Tyttebærsyltetøj",
+            "grossQuantity": "700 g",
+            "wastePercentage": "0%",
+            "nettoQuantity": "700 g"
+          },
+          {
+            "name": "Perleløg",
+            "grossQuantity": "~16.9 kg",
+            "wastePercentage": "~20%",
+            "nettoQuantity": "13.5 kg"
+          },
+          {
+            "name": "Sukker (til løg)",
+            "grossQuantity": "1 kg",
+            "wastePercentage": "0%",
+            "nettoQuantity": "1 kg"
+          },
+          {
+            "name": "Kartofler",
+            "grossQuantity": "~84.4 kg",
+            "wastePercentage": "~20%",
+            "nettoQuantity": "67.5 kg"
+          }
+        ],
+        "steps": [
+          "Sauce: Si stegeskyen fra gryderne. Kog op og skum for fedt. Tilsæt fløde og kog ind. Smag til med tyttebærsyltetøj, salt og peber. Jævn evt. med maizena og farv med kulør (ca. 70g pr. portion).",
+          "Glaserede Perleløg: Smelt sukker til karamel in en gryde, tilsæt smør og derefter de pillede perleløg. Glaser them til de er gyldne og møre (ca. 30g pr. portion).",
+          "Tilbehør: Kog kartoflerne (ca. 150g pr. portion).",
+          "Servering: Skær stegen i skiver (ca. 200g). Server med kogte kartofler, glaserede perleløg og rødvinssauce."
+        ]
+      }
+    ]
+  }
+]
