@@ -118,13 +118,15 @@
     color: #c62828;
 }
 
-/* Table - SMART FIT */
+/* Table - SMART FIT LOCKED */
 table.menu-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 10pt;
+    /* Increased for elderly */
     table-layout: fixed;
-    border: 1px solid #777;
+    /* STRICT LOCK */
+    border: 2px solid #444;
     margin-bottom: 0;
     flex-grow: 1;
 }
@@ -132,13 +134,14 @@ table.menu-table {
 table.menu-table thead tr {
     background: #1b5e20;
     color: white;
-    height: 28px;
+    height: 30px;
+    /* Standard professional height */
 }
 
 table.menu-table th {
     background: #1b5e20;
     color: white;
-    padding: 3px 2px;
+    padding: 0 4px;
     text-align: left;
     border: 1px solid #0d3817;
     font-weight: 700;
@@ -154,7 +157,7 @@ table.menu-table .week-header th {
     color: #000 !important;
     text-align: center;
     font-size: 11pt;
-    padding: 3px;
+    padding: 4px;
     border: 1px solid #999;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -162,88 +165,92 @@ table.menu-table .week-header th {
 }
 
 table.menu-table td {
-    padding: 5px 8px;
+    padding: 3px 4px;
     border: 1px solid #aaa;
     vertical-align: middle;
-    line-height: 1.1;
-    font-size: 8.5pt;
-    height: 18px;
-    white-space: nowrap;
+    line-height: 1.15;
+    font-size: 9pt;
+    /* Adjusted for better fit */
+    min-height: 30px;
+    /* Minimum height for consistency */
+    max-height: 36px;
+    /* Maximum height to prevent overflow */
+    white-space: normal;
     overflow: hidden;
+    color: #000;
     text-overflow: ellipsis;
-    background: white;
-    color: #111;
+    word-wrap: break-word;
 }
 
 table.menu-table tbody tr:nth-child(odd) td {
-    background-color: #f7f7f7;
+    background-color: #f4f4f4;
 }
 
 /* Specific Rows */
 .row-sun td {
     background-color: #fff8e1 !important;
     border-bottom: 2px solid #ff9800;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .row-fest td {
     background-color: #e1f5fe !important;
     border-bottom: 2px solid #0288d1;
-    font-weight: 500;
+    font-weight: 600;
 }
 
-/* Columns - PROFESSIONAL WIDTHS FOR PRINT */
+/* Columns - PROFESSIONAL WIDTHS */
 .col-dato {
-    width: 10%;
+    width: 9%;
     font-weight: 700;
     text-align: center;
+    word-break: normal;
+    white-space: normal;
 }
 
-td.col-dato {
-    background-color: #e8e8e8;
-}
-
-/* Only apply grey to body cells */
-
-/* Removed !important to allow row override */
 .col-icon {
-    width: 3%;
+    width: 4%;
     text-align: center;
-    font-size: 11pt;
+    font-size: 14pt;
+    /* Pop the icon */
+    word-break: normal;
 }
 
 .col-nr {
-    width: 2%;
-    visibility: hidden;
+    display: none;
+    /* Hide unused column */
 }
 
-/* Fixed typo 'isibility' */
 .col-ret {
-    width: 24%;
+    width: 28%;
     font-weight: 700;
     color: #000;
-    font-size: 9pt;
+    font-size: 9.5pt;
+    /* Adjusted for better fit */
+    word-break: break-word;
+    hyphens: auto;
+    line-height: 1.1;
 }
 
 .col-sauce {
-    width: 11%;
-    font-size: 8pt;
+    width: 12%;
+    font-size: 9pt;
     color: #333;
-    font-weight: 600;
+    word-break: break-word;
 }
 
 .col-kul {
-    width: 11%;
-    font-size: 8pt;
+    width: 12%;
+    font-size: 9pt;
     color: #333;
-    font-weight: 600;
+    word-break: break-word;
 }
 
 .col-til {
     width: 13%;
-    font-size: 8pt;
+    font-size: 9pt;
     color: #333;
-    font-weight: 600;
+    word-break: break-word;
 }
 
 .col-des {
@@ -251,10 +258,14 @@ td.col-dato {
     font-weight: 700;
     color: #0d47a1;
     font-size: 9pt;
+    word-break: break-word;
+    hyphens: auto;
 }
 
+/* Remove chaotic column backgrounds for cleaner look */
+td.col-dato,
 td.col-des {
-    background: #e3f2fd !important;
+    /* Rely on row coloring */
 }
 
 /* Only apply blue tint to body cells */
@@ -291,6 +302,97 @@ td.col-des {
     padding: 5px;
     border-top: 1px solid #ccc;
     margin-top: auto;
+    page-break-inside: avoid;
+}
+
+/* Print-specific optimizations */
+@media print {
+
+    /* Ensure tables don't break across pages */
+    table.menu-table {
+        page-break-inside: avoid;
+    }
+
+    /* Prevent row breaking */
+    table.menu-table tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+
+    /* Week headers should stay with their content */
+    table.menu-table .week-header {
+        page-break-after: avoid;
+    }
+
+    /* Better handling of long text in cells */
+    table.menu-table td {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
+
+    /* Ensure headers stay with content */
+    .header-box,
+    .info-bar {
+        page-break-after: avoid;
+    }
+
+    /* Improve text readability in print */
+    .alc-card,
+    .info-card {
+        page-break-inside: avoid;
+    }
+
+    /* Better spacing for print */
+    .a4-page-landscape {
+        padding: 8mm;
+    }
+}
+
+/* Header spacing improvements */
+.header-box {
+    margin-bottom: 4px;
+    padding: 6px 10px 4px 10px;
+}
+
+.header-box h1 {
+    font-size: 22pt;
+}
+
+.header-box h2 {
+    font-size: 10pt;
+}
+
+/* Info bar spacing */
+.info-bar {
+    padding: 5px 10px;
+    font-size: 9.5pt;
+    margin-bottom: 6px;
+}
+
+/* Table header improvements */
+table.menu-table thead tr {
+    height: 28px;
+}
+
+table.menu-table th {
+    font-size: 9.5pt;
+    padding: 0 3px;
+}
+
+/* Week header improvements */
+table.menu-table .week-header th {
+    font-size: 10.5pt;
+    padding: 3px 4px;
+}
+
+/* Better row spacing */
+table.menu-table tbody tr:nth-child(odd) td {
+    background-color: #f8f8f8;
+}
+
+table.menu-table tbody tr:nth-child(even) td {
+    background-color: #ffffff;
 }
 
 /* Ala Carte Grid */
@@ -385,6 +487,11 @@ td.col-des {
 .info-card ul {
     margin: 5px 0 0 15px;
     padding: 0;
+}
+
+.card-green {
+    background: #e8f5e9;
+    border-left-color: #2e7d32;
 }
 
 .info-card li {
@@ -490,4 +597,161 @@ td.col-des {
     font-size: 16pt;
     color: #1b5e20;
     font-weight: 700;
+}
+
+/* =========================================
+   NEW CLASSES FOR PRODUCTION PACKAGE (REFARCTOR)
+   ========================================= */
+
+/* Screen Styles - Colorful & Distinct */
+.header-production {
+    background: linear-gradient(to right, #1b5e20, #2e7d32);
+}
+
+.header-standards {
+    background: linear-gradient(to right, #388e3c, #4caf50);
+}
+
+.header-schedule {
+    background: linear-gradient(to right, #1976d2, #2196f3);
+}
+
+.header-recipe {
+    background: linear-gradient(to right, #388e3c, #4caf50);
+}
+
+.header-purchasing {
+    background: linear-gradient(to right, #f57c00, #ff9800);
+}
+
+.header-quality {
+    background: linear-gradient(to right, #7b1fa2, #9c27b0);
+}
+
+.info-production {
+    background: #e8f5e9;
+    border: 2px solid #2e7d32;
+}
+
+/* =========================================
+   PRINT OVERRIDES - ADHD FRIENDLY / HIGH CONTRAST
+   ========================================= */
+@media print {
+
+    /* 1. Force White Backgrounds & Black Text */
+    .header-box,
+    .header-production,
+    .header-standards,
+    .header-schedule,
+    .header-recipe,
+    .header-purchasing,
+    .header-quality,
+    .contact-hero {
+        background: white !important;
+        color: black !important;
+        border-bottom: 4px solid black !important;
+        border-radius: 0 !important;
+        text-shadow: none !important;
+        padding-left: 0 !important;
+        margin-bottom: 10mm !important;
+        /* Extra space after headers */
+    }
+
+    /* 2. Header Typography - distinct */
+    .header-box h1,
+    .contact-hero .contact-title {
+        color: black !important;
+        font-size: 24pt !important;
+        font-weight: 900 !important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .header-box h2,
+    .contact-hero .contact-subtitle {
+        color: #000 !important;
+        font-size: 12pt !important;
+        font-weight: normal !important;
+        font-style: italic;
+        margin-top: 5px !important;
+    }
+
+    /* 3. Info Bars & Highlights */
+    .info-bar,
+    .info-production {
+        background: white !important;
+        border: 2px solid black !important;
+        color: black !important;
+        font-weight: bold !important;
+        padding: 5mm !important;
+    }
+
+    .contact-highlight,
+    .text-green-800,
+    .text-blue-800,
+    .text-orange-800,
+    .text-red-800,
+    .text-slate-800,
+    .text-slate-700 {
+        color: black !important;
+    }
+
+    /* 4. Containers & Cards - High Contrast Borders */
+    .bg-white,
+    .bg-slate-50,
+    .bg-orange-50,
+    .bg-green-50,
+    .bg-blue-50,
+    .bg-yellow-50,
+    .bg-red-50,
+    .bg-slate-100,
+    .bg-slate-200 {
+        background-color: white !important;
+        border: 2px solid black !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        color: black !important;
+    }
+
+    /* 5. Production Schedule Specifics */
+    /* Time badges */
+    .bg-slate-100 {
+        border: 1px solid black !important;
+        font-weight: 900 !important;
+    }
+
+    /* 6. General Text Visibility */
+    p,
+    span,
+    div,
+    strong,
+    li {
+        color: black !important;
+    }
+
+    /* 7. Icons (Lucide) - Make them black */
+    svg {
+        color: black !important;
+        stroke: black !important;
+    }
+
+    /* 8. Table overrides */
+    table,
+    th,
+    td {
+        border: 1px solid black !important;
+        color: black !important;
+    }
+
+    thead tr {
+        background: #ddd !important;
+        /* Light grey for header background only */
+        color: black !important;
+    }
+
+    th {
+        background: #ddd !important;
+        color: black !important;
+        font-weight: 900 !important;
+    }
 }

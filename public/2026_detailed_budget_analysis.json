@@ -1,0 +1,172 @@
+{
+  "total_dishes": 108,
+  "detailed_recipes": 7,
+  "estimated_dishes": 101,
+  "annual_main_dinner": 2675969.9999999995,
+  "daily_average": 7331.424657534245,
+  "per_serving_average": 16.292054794520546,
+  "top_20_expensive": [
+    {
+      "dish": "Høns i asparges",
+      "days_per_year": 12,
+      "cost_per_serving": 17.49,
+      "annual_cost": 94445.99999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Frikadeller",
+      "days_per_year": 11,
+      "cost_per_serving": 17.49,
+      "annual_cost": 86575.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Stegt Ørred (Vejle)",
+      "days_per_year": 11,
+      "cost_per_serving": 17.49,
+      "annual_cost": 86575.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Kalkungryde",
+      "days_per_year": 10,
+      "cost_per_serving": 17.49,
+      "annual_cost": 78704.99999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Svensk Pølseret",
+      "days_per_year": 10,
+      "cost_per_serving": 17.49,
+      "annual_cost": 78704.99999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Gl.dags Oksesteg",
+      "days_per_year": 9,
+      "cost_per_serving": 17.49,
+      "annual_cost": 70834.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Kalvesteg",
+      "days_per_year": 9,
+      "cost_per_serving": 17.49,
+      "annual_cost": 70834.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Unghanebryst",
+      "days_per_year": 9,
+      "cost_per_serving": 17.49,
+      "annual_cost": 70834.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Ovnæggekage",
+      "days_per_year": 9,
+      "cost_per_serving": 17.49,
+      "annual_cost": 70834.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Kylling i Karry",
+      "days_per_year": 8,
+      "cost_per_serving": 17.49,
+      "annual_cost": 62963.99999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Fiskefrikadeller",
+      "days_per_year": 8,
+      "cost_per_serving": 17.49,
+      "annual_cost": 62963.99999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Benløse Fugle",
+      "days_per_year": 8,
+      "cost_per_serving": 17.49,
+      "annual_cost": 62963.99999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Hakkebøf",
+      "days_per_year": 8,
+      "cost_per_serving": 17.49,
+      "annual_cost": 62963.99999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Bagt Ørred (Vejle)",
+      "days_per_year": 8,
+      "cost_per_serving": 17.49,
+      "annual_cost": 62963.99999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Porretærte",
+      "days_per_year": 7,
+      "cost_per_serving": 17.49,
+      "annual_cost": 55093.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Dampet Ørred",
+      "days_per_year": 7,
+      "cost_per_serving": 17.49,
+      "annual_cost": 55093.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Brændende Kærlighed",
+      "days_per_year": 7,
+      "cost_per_serving": 17.49,
+      "annual_cost": 55093.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Boller i Selleri",
+      "days_per_year": 7,
+      "cost_per_serving": 17.49,
+      "annual_cost": 55093.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Forloren Hare",
+      "days_per_year": 7,
+      "cost_per_serving": 17.49,
+      "annual_cost": 55093.49999999999,
+      "has_detail": false
+    },
+    {
+      "dish": "Stegt Flæsk",
+      "days_per_year": 7,
+      "cost_per_serving": 17.49,
+      "annual_cost": 55093.49999999999,
+      "has_detail": false
+    }
+  ],
+  "category_breakdown": {
+    "Meat/Protein": {
+      "daily": 2932.569863013698,
+      "annual": 1070387.9999999998
+    },
+    "Vegetables": {
+      "daily": 1466.284931506849,
+      "annual": 535193.9999999999
+    },
+    "Dairy/Eggs": {
+      "daily": 1099.7136986301366,
+      "annual": 401395.4999999999
+    },
+    "Carbs (potatoes/rice/pasta)": {
+      "daily": 1099.7136986301366,
+      "annual": 401395.4999999999
+    },
+    "Sauces/Spices/Other": {
+      "daily": 733.1424657534245,
+      "annual": 267596.99999999994
+    }
+  }
+}

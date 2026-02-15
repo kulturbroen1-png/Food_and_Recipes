@@ -25,8 +25,8 @@ export const menuCategories: Record<string, MenuItem[]> = {
     { id: 80116, name: "Leverpostej Kastanjehaven", category: "Pålæg / Produktion" },
     { id: 56030, name: "Rabarberkompot", category: "Green add ons" },
     { id: 59046, name: "Sauce Tatare", category: "Saucer & dressinger" },
-    { id: 275170, name: "Gurkemejecreme", category: "Tilbehør - aften" },
-    { id: 900374, name: "Søde kartofler (Pålæg)", category: "Snitgrønt" }
+    { id: 275170, name: "Gurkemejecreme", category: "Tilbehør - aften" }
+    // REMOVED: ID 900374 (Søde kartofler) - NOT ON ACTUAL MENU
   ],
   grundtilberedning: [
     { id: 10001, name: "Hønsefond (Basis)", category: "Grundtilberedning" },

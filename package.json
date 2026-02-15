@@ -1,5 +1,5 @@
 {
-  "name": "breelteparken-køkken-management-pro",
+  "name": "breelteparken-kokken-management-pro",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,9 +17,12 @@
   "dependencies": {
     "@emotion/is-prop-valid": "^1.4.0",
     "@google/genai": "^1.7.0",
+    "axios": "^1.13.5",
+    "compromise": "^14.14.5",
     "crypto-js": "^4.2.0",
     "dotenv": "^17.2.3",
     "exceljs": "^4.4.0",
+    "firebase": "^12.9.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^4.0.0",
     "lucide-react": "^0.562.0",

@@ -6,6 +6,7 @@ import { allSprint6Recipes } from './recipesSprint6';
 import { allSprint7Recipes } from './recipesSprint7';
 import { allSprint8Recipes } from './recipesSprint8';
 import { allSprint9Recipes } from './recipesSprint9';
+import { allMarch2026Recipes } from './recipesMarch2026';
 
 // Chef Ashis Gautams KOMPLETTE Opskriftsdatabase - Breelteparken 2026
 // Kilde: Samlet JSON-import (Part 1-4) + Sprint 2-5 (AI-genereret)
@@ -86,8 +87,8 @@ const baseRecipes: Record<string, any> = {
   "DS-010": { recipeName: "Chokolademousse", id: "DS-010", category: "Desserter", yield_net: "10.0 KG", ingredients: [{ name: "Mørk chokolade (64%)", quantity: 2000, unit: "g" }, { name: "Smør", quantity: 500, unit: "g" }, { name: "Æg (hele)", quantity: 1200, unit: "g" }, { name: "Sukker", quantity: 600, unit: "g" }, { name: "Piskefløde", quantity: 3000, unit: "ml" }, { name: "Vaniljeekstrakt", quantity: 30, unit: "ml" }], method: ["Smelt chokolade og smør au bain-marie.", "Adskil æg. Pisk blommer og sukker hvidt.", "Rør chokolademassen i blommemassen.", "Pisk æggehvider stive.", "Pisk fløde halvstiv.", "Vend først hvider, så fløde i chokoladen.", "Portioner i skåle og køl min. 4 timer."] },
 
   // PÅLÆG & SNIT
-  "80116": { recipeName: "Leverpostej Kastanjehaven", id: "80116", category: "Pålæg / Produktion", yield_net: "12.5 KG", ingredients: [{ name: "Svinelever", quantity: 4000, unit: "g" }, { name: "Spæk", quantity: 2000, unit: "g" }, { name: "Mælk", quantity: 4500, unit: "ml" }], method: ["Hak lever/spæk.", "Lav opbagning.", "Bland alt.", "Bages i vandbad til 75 grader."] },
-  "900374": { recipeName: "Søde kartofler til smørrebrød", id: "900374", category: "Snitgrønt", yield_net: "102.2 KG", ingredients: [{ name: "Søde kartofler", quantity: 102225, unit: "g" }], method: ["Damp i 30-45 min.", "Afkøl, skræl og skær i skiver."] }
+  "80116": { recipeName: "Leverpostej Kastanjehaven", id: "80116", category: "Pålæg / Produktion", yield_net: "12.5 KG", ingredients: [{ name: "Svinelever", quantity: 4000, unit: "g" }, { name: "Spæk", quantity: 2000, unit: "g" }, { name: "Mælk", quantity: 4500, unit: "ml" }], method: ["Hak lever/spæk.", "Lav opbagning.", "Bland alt.", "Bages i vandbad til 75 grader."] }
+  // REMOVED: "900374" (Søde kartofler til smørrebrød) - NOT ON ACTUAL MENU
 
 };
 
@@ -100,6 +101,7 @@ const sourceRecipes: Record<string, any> = {
   ...allSprint7Recipes,
   ...allSprint8Recipes,
   ...allSprint9Recipes,
+  ...allMarch2026Recipes,
 };
 
 
@@ -175,23 +177,31 @@ export const getAuthenticRecipe = (name: string, targetParams: RecipeParameters)
     recipeNumber: match.id,
     levnedsmiddelNr: `MDS-${match.id}`,
     category: match.category,
+    sourceReference: match.source_file,
     yield: {
       portions: targetPortions.toString(),
       rawWeightPerPortion: `${Math.round((baseYieldVal / (targetPortions / factor)) * 1000)}g`,
-      finishedWeightPerPortion: targetParams.weightPerPiece + "g"
+      finishedWeightPerPortion: targetParams.weightPerPiece + "g",
+      wastePercentage: match.yield?.wastePercentage || 0
     },
     timeEstimate: "Jf. Chef Ashis Metode",
     difficulty: "MDS Professionel",
     storageNotes: "Cook-Chill (Køl straks til < 5°C)",
-    specialRequirements: "97,5% Økologi Pålægges",
+    specialRequirements: "Ældreloven: Proteinrig & Energirig kost",
     ingredients: match.ingredients.map((ing: any) => ({
       name: ing.name,
-      quantity: Math.round(ing.quantity * factor),
-      grossQuantity: Math.round(ing.quantity * factor * 1.22),
+      // Use 2 decimal places for precise scaling (e.g. home portions)
+      quantity: parseFloat((ing.quantity * factor).toFixed(2)),
+      grossQuantity: parseFloat((ing.quantity * factor * 1.22).toFixed(2)),
       scaling: `${Math.round(factor * 100)}%`
     })),
+    subRecipes: match.subRecipes ? match.subRecipes.map((sub: any) => ({
+      ...sub,
+      quantity: parseFloat((sub.quantity * factor).toFixed(2))
+    })) : [],
     steps: match.method.map((m: string) => ({ description: m })),
     varedeklaration: match.ingredients.map((i: any) => i.name.toUpperCase()).join(", "),
-    productionNotes: `Opskrift fra Chef Ashis Gautams database (ID: ${match.id}).`
+    productionNotes: `Opskrift fra Chef Ashis Gautams database (ID: ${match.id}).${match.source_file ? ` Kilde: ${match.source_file}` : ''}`,
+    nutrition: match.nutrition
   };
 };

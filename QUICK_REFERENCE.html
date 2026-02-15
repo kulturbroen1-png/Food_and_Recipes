@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUICK REFERENCE - Ingredient Checker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            border-radius: 15px;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .step {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 5px solid #28a745;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 15px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .checklist li::before {
+            content: '☐ ';
+            color: #667eea;
+            font-size: 28px;
+            margin-right: 10px;
+        }
+
+        .alert {
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            color: #155724;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            color: #856404;
+        }
+
+        .alert-danger {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            color: #721c24;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .price-table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .price-table td {
+            padding: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .price-table tr:hover {
+            background: #f0f0f0;
+        }
+
+        .big-text {
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .emoji {
+            font-size: 40px;
+        }
+
+        .status-verified {
+            color: #28a745;
+        }
+
+        .status-estimated {
+            color: #ffc107;
+        }
+
+        .warning-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 5px solid #dc3545;
+        }
+
+        .warning-text {
+            font-size: 22px;
+        }
+
+        .big-text-green {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+
+        .big-text-small {
+            font-size: 28px;
+        }
+
+        .link-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-primary {
+            color: #667eea;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .text-large {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .text-medium {
+            font-size: 20px;
+        }
+
+        .margin-top-30 {
+            margin-top: 30px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>✅ QUICK INGREDIENT CHECKER</h1>
+        <p class="subtitle">Simple guide for kitchen staff</p>
+
+        <div class="big-text">
+            <span class="emoji">🎯</span><br>
+            ONE STEP AT A TIME
+        </div>
+
+        <!-- 3 SIMPLE STEPS -->
+        <div class="section">
+            <div class="section-title">📋 3 SIMPLE STEPS</div>
+
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>Open Dashboard:</strong> http://localhost:3000/
+            </div>
+
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>Click:</strong> "📊 Forecast" button (bottom menu)
+            </div>
+
+            <div class="step">
+                <span class="step-number">3</span>
+                <strong>Find Your Recipe:</strong> Click recipe name in table
+            </div>
+        </div>
+
+        <!-- PRICE GUIDELINES -->
+        <div class="section">
+            <div class="section-title">💰 NORMAL PRICES (Per Portion)</div>
+
+            <div class="alert alert-success">
+                <span class="emoji">✅</span> 20-50 kr = NORMAL PRICE
+            </div>
+
+            <div class="alert alert-warning">
+                <span class="emoji">⚠️</span> 50-80 kr = EXPENSIVE (fish/premium)
+            </div>
+
+            <div class="alert alert-danger">
+                <span class="emoji">🔴</span> Over 80 kr = TOO EXPENSIVE!
+            </div>
+        </div>
+
+        <!-- COMMON INGREDIENTS -->
+        <div class="section">
+            <div class="section-title">📦 COMMON INGREDIENT PRICES</div>
+
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Ingredient</th>
+                        <th>Normal Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🧈 Butter (Smør)</td>
+                        <td>101 kr/kg</td>
+                        <td><strong class="status-verified">✅ Verified</strong></td>
+                    </tr>
+                    <tr>
+                        <td>🥛 Cream (Piskefløde)</td>
+                        <td>41 kr/L</td>
+                        <td><strong class="status-verified">✅ Verified</strong></td>
+                    </tr>
+                    <tr>
+                        <td>🍗 Chicken (Kylling)</td>
+                        <td>88 kr/kg</td>
+                        <td><strong class="status-verified">✅ Verified</strong></td>
+                    </tr>
+                    <tr>
+                        <td>🥩 Beef (Oksekød)</td>
+                        <td>~50 kr/kg</td>
+                        <td><strong class="status-estimated">⚠️ Estimated</strong></td>
+                    </tr>
+                    <tr>
+                        <td>🥔 Potatoes (Kartofler)</td>
+                        <td>53 kr/kg</td>
+                        <td><strong class="status-verified">✅ Verified</strong></td>
+                    </tr>
+                    <tr>
+                        <td>🧅 Onion (Løg)</td>
+                        <td>~50 kr/kg</td>
+                        <td><strong class="status-estimated">⚠️ Estimated</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- BEFORE COOKING CHECKLIST -->
+        <div class="section">
+            <div class="section-title">🛑 BEFORE YOU START</div>
+
+            <ul class="checklist">
+                <li>Recipe = 450 portions?</li>
+                <li>All ingredients listed?</li>
+                <li>Prices look OK?</li>
+                <li>Instructions clear?</li>
+                <li>Amounts make sense?</li>
+            </ul>
+
+            <div class="alert alert-danger margin-top-30">
+                <span class="emoji">🆘</span> IF UNSURE → STOP AND ASK!
+            </div>
+        </div>
+
+        <!-- WHEN TO STOP -->
+        <div class="section">
+            <div class="section-title">🔴 STOP IF YOU SEE:</div>
+
+            <div class="warning-box">
+                <span class="emoji">🔴</span> <strong class="warning-text">Price over 100 kr/portion</strong>
+            </div>
+
+            <div class="warning-box">
+                <span class="emoji">🔴</span> <strong class="warning-text">Price under 10 kr/portion</strong>
+            </div>
+
+            <div class="warning-box">
+                <span class="emoji">🔴</span> <strong class="warning-text">Missing ingredients</strong>
+            </div>
+
+            <div class="warning-box">
+                <span class="emoji">🔴</span> <strong class="warning-text">Confusing instructions</strong>
+            </div>
+        </div>
+
+        <!-- TIPS FOR FOCUS -->
+        <div class="big-text big-text-green">
+            <span class="emoji">💡</span><br>
+            TAKE BREAKS<br>
+            ASK QUESTIONS<br>
+            NO SHAME!
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="section">
+            <div class="section-title">🔗 QUICK ACCESS</div>
+
+            <div class="link-box">
+                <strong>Main Dashboard:</strong><br>
+                <a href="http://localhost:3000/" class="link-primary">localhost:3000</a>
+            </div>
+
+            <div class="link-box">
+                <strong>Budget Forecast:</strong><br>
+                <span class="text-large">Click "📊 Forecast"</span>
+            </div>
+        </div>
+
+        <div class="big-text big-text-small">
+            <span class="emoji">✅</span><br>
+            YOU GOT THIS!<br>
+            <span class="text-medium">One recipe at a time</span>
+        </div>
+    </div>
+</body>
+
+</html>

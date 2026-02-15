@@ -29,6 +29,7 @@ export interface Ingredient {
   name: string;
   levnedsmiddelNr?: string;
   quantity: number;
+  unit: string;
   grossQuantity: number;
   scaling: string;
   wastePercentage?: number;
@@ -82,6 +83,7 @@ export interface RecipeData {
     portions: string;
     rawWeightPerPortion: string;
     finishedWeightPerPortion: string;
+    wastePercentage?: number; // Svind %
   };
   timeEstimate: string;
   difficulty: string;

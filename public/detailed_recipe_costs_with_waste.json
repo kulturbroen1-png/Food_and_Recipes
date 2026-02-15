@@ -1,0 +1,1066 @@
+{
+  "generated": "2026-02-14",
+  "total_recipes": 7,
+  "total_ingredients": 75,
+  "matched_to_horkram": 46,
+  "estimated": 24,
+  "recipes": [
+    {
+      "recipe_name": "Skipperlabskovs",
+      "portions": 450,
+      "ingredients": [
+        {
+          "name": "Oksebov",
+          "matched_product": "Oksebov",
+          "gross_quantity_kg": 116.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 121.80000000000001,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 6090.000000000001,
+          "waste_cost": 290.00000000000006,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Bagekartofler",
+          "matched_product": "Bagekartofler",
+          "gross_quantity_kg": 84.4,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 88.62,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 4431.0,
+          "waste_cost": 211.00000000000003,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Løg",
+          "matched_product": "Løg",
+          "gross_quantity_kg": 17.0,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 18.700000000000003,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 935.0000000000001,
+          "waste_cost": 85.00000000000001,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Smør",
+          "matched_product": "Arla Pro Smør Arla Pro, Bulk, 10 kg økologisk (87642)",
+          "gross_quantity_kg": 5.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 5.25,
+          "price_per_kg": 101.2462,
+          "ingredient_cost": 531.54255,
+          "waste_cost": 25.31155,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Laurbærblade",
+          "matched_product": "Laurbærblade",
+          "gross_quantity_kg": 0.06,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 0.063,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 3.15,
+          "waste_cost": 0.15,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Hele peberkorn",
+          "matched_product": "Aurion Gråærter, hele, 5 kg økologisk (884623)",
+          "gross_quantity_kg": 0.25,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 0.2625,
+          "price_per_kg": 38.376400000000004,
+          "ingredient_cost": 10.073805000000002,
+          "waste_cost": 0.47970500000000005,
+          "supplier": "Hørkram"
+        }
+      ],
+      "condiments": [
+        {
+          "name": "salt",
+          "quantity_per_portion": 0.002,
+          "total_quantity": 0.9,
+          "price": 8.5,
+          "cost": 7.65
+        },
+        {
+          "name": "peber",
+          "quantity_per_portion": 0.001,
+          "total_quantity": 0.45,
+          "price": 85.0,
+          "cost": 38.25
+        },
+        {
+          "name": "olie",
+          "quantity_per_portion": 0.01,
+          "total_quantity": 4.5,
+          "price": 25.0,
+          "cost": 112.5
+        },
+        {
+          "name": "vand",
+          "quantity_per_portion": 0.1,
+          "total_quantity": 45.0,
+          "price": 0.01,
+          "cost": 0.45
+        }
+      ],
+      "total_ingredient_cost": 12000.766355,
+      "total_condiment_cost": 158.85,
+      "waste_cost": 611.9412550000001,
+      "total_cost": 12159.616355,
+      "cost_per_portion": 27.021369677777777
+    },
+    {
+      "recipe_name": "Sprængt Kylling med Peberrodssauce",
+      "portions": 450,
+      "ingredients": [
+        {
+          "name": "Hel kylling",
+          "matched_product": "Frost BPI Kyllinge inderfilet, 3 delt, stegt, halal, 15 g, 2,5 kg (320046)",
+          "gross_quantity_kg": 103.0,
+          "waste_percentage": 15.0,
+          "actual_quantity_kg": 118.44999999999999,
+          "price_per_kg": 87.916,
+          "ingredient_cost": 10413.650199999998,
+          "waste_cost": 1358.3021999999999,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Vand",
+          "matched_product": "Glyngøre Tun i vand, Skipjack, alupose, 1 kg (73474)",
+          "gross_quantity_kg": 141.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 148.05,
+          "price_per_kg": 102.788,
+          "ingredient_cost": 15217.7634,
+          "waste_cost": 724.6554000000001,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Groft salt",
+          "matched_product": "Frisksnit Hvidkål groftsnittet 6 mm, 1 kg (2104-1)",
+          "gross_quantity_kg": 11.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 11.55,
+          "price_per_kg": 33.868,
+          "ingredient_cost": 391.1754,
+          "waste_cost": 18.6274,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Sukker",
+          "matched_product": "Jolly Jolly Cola, sukkerfri, 33 cl (801018)",
+          "gross_quantity_kg": 3.9,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 4.095,
+          "price_per_kg": 13.793939393939393,
+          "ingredient_cost": 56.48618181818181,
+          "waste_cost": 2.6898181818181817,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Gulerødder",
+          "matched_product": "Chefs Cut Gulerødder julienne strimler 2 mm, 1 kg økologisk (82027)",
+          "gross_quantity_kg": 24.7,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 25.935,
+          "price_per_kg": 31.938,
+          "ingredient_cost": 828.3120299999999,
+          "waste_cost": 39.44343,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Blegselleri",
+          "matched_product": "Blegselleri",
+          "gross_quantity_kg": 11.1,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 11.655,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 582.75,
+          "waste_cost": 27.750000000000004,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Porrer",
+          "matched_product": "Chefs Cut Porrer i skiver 5 mm, 1 kg (82105)",
+          "gross_quantity_kg": 6.7,
+          "waste_percentage": 25.0,
+          "actual_quantity_kg": 8.375,
+          "price_per_kg": 42.599000000000004,
+          "ingredient_cost": 356.76662500000003,
+          "waste_cost": 71.35332500000001,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Smør",
+          "matched_product": "Arla Pro Smør Arla Pro, Bulk, 10 kg økologisk (87642)",
+          "gross_quantity_kg": 2.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 2.625,
+          "price_per_kg": 101.2462,
+          "ingredient_cost": 265.771275,
+          "waste_cost": 12.655775,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Hvedemel",
+          "matched_product": "Casa italia Hvedemel, Tipo 00, 5 kg økologisk (016401)",
+          "gross_quantity_kg": 2.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 2.625,
+          "price_per_kg": 19.1956,
+          "ingredient_cost": 50.38845,
+          "waste_cost": 2.39945,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Kyllingefond (fra kogning)",
+          "matched_product": "Kyllingefond (fra kogning)",
+          "gross_quantity_kg": 25.0,
+          "waste_percentage": 15.0,
+          "actual_quantity_kg": 28.749999999999996,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 1437.4999999999998,
+          "waste_cost": 187.5,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Piskefløde",
+          "matched_product": "Arla Pro Piskefløde 38%, 1 l (16583)",
+          "gross_quantity_kg": 5.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 5.25,
+          "price_per_kg": 40.59654471544716,
+          "ingredient_cost": 213.13185975609758,
+          "waste_cost": 10.14913617886179,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Friskrevet Peberrod",
+          "matched_product": "Carlsens's Revet peberrod (00190) 6 x 850 g.",
+          "gross_quantity_kg": 2.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 2.1,
+          "price_per_kg": 101.82,
+          "ingredient_cost": 213.822,
+          "waste_cost": 10.182,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Kartofler",
+          "matched_product": "Frisksnit Søde kartofler julienne 2 mm, 1 kg (3712-1)",
+          "gross_quantity_kg": 112.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 118.125,
+          "price_per_kg": 57.112,
+          "ingredient_cost": 6746.3550000000005,
+          "waste_cost": 321.255,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Gulerødder (tilbehør)",
+          "matched_product": "Chefs Cut Gulerødder julienne strimler 2 mm, 1 kg økologisk (82027)",
+          "gross_quantity_kg": 21.2,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 22.26,
+          "price_per_kg": 31.938,
+          "ingredient_cost": 710.93988,
+          "waste_cost": 33.85428,
+          "supplier": "Hørkram"
+        }
+      ],
+      "condiments": [
+        {
+          "name": "salt",
+          "quantity_per_portion": 0.002,
+          "total_quantity": 0.9,
+          "price": 8.5,
+          "cost": 7.65
+        },
+        {
+          "name": "peber",
+          "quantity_per_portion": 0.001,
+          "total_quantity": 0.45,
+          "price": 85.0,
+          "cost": 38.25
+        },
+        {
+          "name": "olie",
+          "quantity_per_portion": 0.01,
+          "total_quantity": 4.5,
+          "price": 25.0,
+          "cost": 112.5
+        },
+        {
+          "name": "vand",
+          "quantity_per_portion": 0.1,
+          "total_quantity": 45.0,
+          "price": 0.01,
+          "cost": 0.45
+        }
+      ],
+      "total_ingredient_cost": 37484.812301574275,
+      "total_condiment_cost": 158.85,
+      "waste_cost": 2820.8172143606794,
+      "total_cost": 37643.66230157427,
+      "cost_per_portion": 83.65258289238727
+    },
+    {
+      "recipe_name": "Bagte Ørred med Spinatcreme",
+      "portions": 450,
+      "ingredients": [
+        {
+          "name": "Ørredfilet m. skind",
+          "matched_product": "Sea Culinar MSC Rødspættefilet, u/skind begge sider, Pleuronectes platessa, str. 2, 60 g+ (18599732-MSC)",
+          "gross_quantity_kg": 140.6,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 147.63,
+          "price_per_kg": 200.398,
+          "ingredient_cost": 29584.756739999997,
+          "waste_cost": 1408.79794,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Smør",
+          "matched_product": "Arla Pro Smør Arla Pro, Bulk, 10 kg økologisk (87642)",
+          "gross_quantity_kg": 1.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 1.05,
+          "price_per_kg": 101.2462,
+          "ingredient_cost": 106.30851000000001,
+          "waste_cost": 5.06231,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Citronsaft",
+          "matched_product": "Lemon Plus Citronsaft ren, 500 ml økologisk (9555)",
+          "gross_quantity_kg": 0.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 0.525,
+          "price_per_kg": 72.98,
+          "ingredient_cost": 38.3145,
+          "waste_cost": 1.8245000000000002,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Spinat (hakket, frost)",
+          "matched_product": "Frost La Lorraine Börek med spinat & feta, 100 x 95 g (4243000)",
+          "gross_quantity_kg": 25.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 26.25,
+          "price_per_kg": 41.98978947368421,
+          "ingredient_cost": 1102.2319736842105,
+          "waste_cost": 52.48723684210526,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Piskefløde",
+          "matched_product": "Arla Pro Piskefløde 38%, 1 l (16583)",
+          "gross_quantity_kg": 20.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 21.0,
+          "price_per_kg": 40.59654471544716,
+          "ingredient_cost": 852.5274390243903,
+          "waste_cost": 40.59654471544716,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Løg",
+          "matched_product": "Løg",
+          "gross_quantity_kg": 2.35,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 2.5850000000000004,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 129.25000000000003,
+          "waste_cost": 11.75,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Kartofler",
+          "matched_product": "Frisksnit Søde kartofler julienne 2 mm, 1 kg (3712-1)",
+          "gross_quantity_kg": 84.4,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 88.62,
+          "price_per_kg": 57.112,
+          "ingredient_cost": 5061.26544,
+          "waste_cost": 241.01264000000003,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Rødløg (til pynt)",
+          "matched_product": "Frisksnit Rødløg råsyltet, 1,1 kg (42700510)",
+          "gross_quantity_kg": 5.9,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 6.490000000000001,
+          "price_per_kg": 45.49272727272727,
+          "ingredient_cost": 295.24780000000004,
+          "waste_cost": 26.840709090909094,
+          "supplier": "Hørkram"
+        }
+      ],
+      "condiments": [
+        {
+          "name": "salt",
+          "quantity_per_portion": 0.002,
+          "total_quantity": 0.9,
+          "price": 8.5,
+          "cost": 7.65
+        },
+        {
+          "name": "peber",
+          "quantity_per_portion": 0.001,
+          "total_quantity": 0.45,
+          "price": 85.0,
+          "cost": 38.25
+        },
+        {
+          "name": "olie",
+          "quantity_per_portion": 0.01,
+          "total_quantity": 4.5,
+          "price": 25.0,
+          "cost": 112.5
+        },
+        {
+          "name": "vand",
+          "quantity_per_portion": 0.1,
+          "total_quantity": 45.0,
+          "price": 0.01,
+          "cost": 0.45
+        }
+      ],
+      "total_ingredient_cost": 37169.9024027086,
+      "total_condiment_cost": 158.85,
+      "waste_cost": 1788.3718806484612,
+      "total_cost": 37328.7524027086,
+      "cost_per_portion": 82.95278311713021
+    },
+    {
+      "recipe_name": "Pastinakpostej med Ratatouille",
+      "portions": 450,
+      "ingredients": [
+        {
+          "name": "Pastinak",
+          "matched_product": "Pastinak KL1 Danmark, 5 kg økologisk (34257968)",
+          "gross_quantity_kg": 69.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 72.45,
+          "price_per_kg": 17.285400000000003,
+          "ingredient_cost": 1252.3272300000003,
+          "waste_cost": 59.634630000000016,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Kartofler",
+          "matched_product": "Frisksnit Søde kartofler julienne 2 mm, 1 kg (3712-1)",
+          "gross_quantity_kg": 27.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 28.875,
+          "price_per_kg": 57.112,
+          "ingredient_cost": 1649.1090000000002,
+          "waste_cost": 78.529,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Røde linser, tørre",
+          "matched_product": "Lampe Hotdogpølser røde, 62,5 g, ca. 2 kg (G1736577)",
+          "gross_quantity_kg": 15.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 15.75,
+          "price_per_kg": 132.40099999999998,
+          "ingredient_cost": 2085.3157499999998,
+          "waste_cost": 99.30075,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Æg (masse)",
+          "matched_product": "Æg (masse)",
+          "gross_quantity_kg": 11.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 11.55,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 577.5,
+          "waste_cost": 27.500000000000004,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Rasp",
+          "matched_product": "Alpro Greek style protein strawberry/raspberry, 150 g (143822)",
+          "gross_quantity_kg": 7.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 7.3500000000000005,
+          "price_per_kg": 61.186666666666675,
+          "ingredient_cost": 449.7220000000001,
+          "waste_cost": 21.415333333333336,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Løg",
+          "matched_product": "Løg",
+          "gross_quantity_kg": 6.0,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 6.6000000000000005,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 330.0,
+          "waste_cost": 30.000000000000004,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Løg",
+          "matched_product": "Løg",
+          "gross_quantity_kg": 29.5,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 32.45,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 1622.5000000000002,
+          "waste_cost": 147.5,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Aubergine",
+          "matched_product": "Auberginer KL1 Holland/Spanien, stk. økologisk (34258866)",
+          "gross_quantity_kg": 31.3,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 32.865,
+          "price_per_kg": 30.612179487179485,
+          "ingredient_cost": 1006.0692788461539,
+          "waste_cost": 47.9080608974359,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Squash",
+          "matched_product": "Frisksnit Squash i tern 10 mm, 1 kg økologisk (Ø6431-1)",
+          "gross_quantity_kg": 31.3,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 32.865,
+          "price_per_kg": 91.181,
+          "ingredient_cost": 2996.6635650000003,
+          "waste_cost": 142.69826500000002,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Peberfrugt (mix)",
+          "matched_product": "Peberfrugt grøn 80/100 KL1 Holland, stk. (ca. 24-26 stk/5 kg pr. ks) (16000896)",
+          "gross_quantity_kg": 31.3,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 32.865,
+          "price_per_kg": 31.734999999999996,
+          "ingredient_cost": 1042.970775,
+          "waste_cost": 49.665275,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Hakkede tomater",
+          "matched_product": "Unifood Mandler hakkede, uden hinde, 1 kg (7998)",
+          "gross_quantity_kg": 20.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 21.0,
+          "price_per_kg": 96.91000000000001,
+          "ingredient_cost": 2035.1100000000001,
+          "waste_cost": 96.91000000000001,
+          "supplier": "Hørkram"
+        }
+      ],
+      "condiments": [
+        {
+          "name": "salt",
+          "quantity_per_portion": 0.002,
+          "total_quantity": 0.9,
+          "price": 8.5,
+          "cost": 7.65
+        },
+        {
+          "name": "peber",
+          "quantity_per_portion": 0.001,
+          "total_quantity": 0.45,
+          "price": 85.0,
+          "cost": 38.25
+        },
+        {
+          "name": "olie",
+          "quantity_per_portion": 0.01,
+          "total_quantity": 4.5,
+          "price": 25.0,
+          "cost": 112.5
+        },
+        {
+          "name": "vand",
+          "quantity_per_portion": 0.1,
+          "total_quantity": 45.0,
+          "price": 0.01,
+          "cost": 0.45
+        }
+      ],
+      "total_ingredient_cost": 15047.287598846155,
+      "total_condiment_cost": 158.85,
+      "waste_cost": 801.0613142307692,
+      "total_cost": 15206.137598846155,
+      "cost_per_portion": 33.79141688632479
+    },
+    {
+      "recipe_name": "Pølse med Krydderurter, Løgsovs og Kartoffelmos",
+      "portions": 450,
+      "ingredients": [
+        {
+          "name": "Krydderurtepølser",
+          "matched_product": "Krydderurtepølser",
+          "gross_quantity_kg": 90.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 94.5,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 4725.0,
+          "waste_cost": 225.0,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Løg (til sovs)",
+          "matched_product": "Løg (til sovs)",
+          "gross_quantity_kg": 20.0,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 22.0,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 1100.0,
+          "waste_cost": 100.0,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Smør (til sovs)",
+          "matched_product": "Frost Bridor Pain au chocolat, 21% smør, 210 x 35 g økologisk (38563)",
+          "gross_quantity_kg": 3.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 3.6750000000000003,
+          "price_per_kg": 124.6734693877551,
+          "ingredient_cost": 458.17500000000007,
+          "waste_cost": 21.817857142857147,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Hvedemel (til sovs)",
+          "matched_product": "Casa italia Hvedemel, Tipo 00, 5 kg økologisk (016401)",
+          "gross_quantity_kg": 3.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 3.6750000000000003,
+          "price_per_kg": 19.1956,
+          "ingredient_cost": 70.54383,
+          "waste_cost": 3.35923,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Okse-/hønsebouillon",
+          "matched_product": "Okse-/hønsebouillon",
+          "gross_quantity_kg": 35.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 36.75,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 1837.5,
+          "waste_cost": 87.5,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Piskefløde (til sovs)",
+          "matched_product": "Arla Pro Piskefløde 38%, 1 l (16583)",
+          "gross_quantity_kg": 3.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 3.6750000000000003,
+          "price_per_kg": 40.59654471544716,
+          "ingredient_cost": 149.19230182926833,
+          "waste_cost": 7.104395325203254,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Kartofler (melet sort)",
+          "matched_product": "Frisksnit Søde kartofler julienne 2 mm, 1 kg (3712-1)",
+          "gross_quantity_kg": 112.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 118.125,
+          "price_per_kg": 57.112,
+          "ingredient_cost": 6746.3550000000005,
+          "waste_cost": 321.255,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Smør",
+          "matched_product": "Arla Pro Smør Arla Pro, Bulk, 10 kg økologisk (87642)",
+          "gross_quantity_kg": 9.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 9.450000000000001,
+          "price_per_kg": 101.2462,
+          "ingredient_cost": 956.7765900000002,
+          "waste_cost": 45.560790000000004,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Sødmælk",
+          "matched_product": "Arla LactoFREE Sødmælk 3,5%, laktosefri, 1 l økologisk (592044)",
+          "gross_quantity_kg": 18.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 18.900000000000002,
+          "price_per_kg": 21.455078125,
+          "ingredient_cost": 405.50097656250006,
+          "waste_cost": 19.3095703125,
+          "supplier": "Hørkram"
+        }
+      ],
+      "condiments": [
+        {
+          "name": "salt",
+          "quantity_per_portion": 0.002,
+          "total_quantity": 0.9,
+          "price": 8.5,
+          "cost": 7.65
+        },
+        {
+          "name": "peber",
+          "quantity_per_portion": 0.001,
+          "total_quantity": 0.45,
+          "price": 85.0,
+          "cost": 38.25
+        },
+        {
+          "name": "olie",
+          "quantity_per_portion": 0.01,
+          "total_quantity": 4.5,
+          "price": 25.0,
+          "cost": 112.5
+        },
+        {
+          "name": "vand",
+          "quantity_per_portion": 0.1,
+          "total_quantity": 45.0,
+          "price": 0.01,
+          "cost": 0.45
+        }
+      ],
+      "total_ingredient_cost": 16449.04369839177,
+      "total_condiment_cost": 158.85,
+      "waste_cost": 830.9068427805604,
+      "total_cost": 16607.89369839177,
+      "cost_per_portion": 36.9064304408706
+    },
+    {
+      "recipe_name": "Paprikagryde med Bønner & Selleri (Vegetar)",
+      "portions": 450,
+      "ingredients": [
+        {
+          "name": "Tørrede bønner (f.eks. hvide bønner)",
+          "matched_product": "Zelected Tørrede tranebær, 1 kg økologisk (30278)",
+          "gross_quantity_kg": 40.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 42.0,
+          "price_per_kg": 181.34,
+          "ingredient_cost": 7616.28,
+          "waste_cost": 362.68,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Løg",
+          "matched_product": "Løg",
+          "gross_quantity_kg": 23.5,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 25.85,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 1292.5,
+          "waste_cost": 117.5,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Champignon",
+          "matched_product": "Champignon hvide, uden rod, KL1 Polen, 2,5 kg økologisk (EP115005)",
+          "gross_quantity_kg": 31.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 33.075,
+          "price_per_kg": 52.1352,
+          "ingredient_cost": 1724.37174,
+          "waste_cost": 82.11294000000001,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Knoldselleri",
+          "matched_product": "Knoldselleri",
+          "gross_quantity_kg": 26.7,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 28.035,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 1401.75,
+          "waste_cost": 66.75,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Peberfrugt, rød",
+          "matched_product": "Peberfrugt, rød",
+          "gross_quantity_kg": 23.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 24.675,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 1233.75,
+          "waste_cost": 58.75,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Smør/Olie",
+          "matched_product": "Smør/Olie",
+          "gross_quantity_kg": 5.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 5.25,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 262.5,
+          "waste_cost": 12.5,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Paprika, edelsüss",
+          "matched_product": "Lepo Kalkunbryst med paprika, kogt, ca. 1,4 kg (280)",
+          "gross_quantity_kg": 1.5,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 1.5750000000000002,
+          "price_per_kg": 134.16,
+          "ingredient_cost": 211.30200000000002,
+          "waste_cost": 10.062000000000001,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Tomatpuré",
+          "matched_product": "Tomatpuré",
+          "gross_quantity_kg": 5.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 5.25,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 262.5,
+          "waste_cost": 12.5,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Hakkede tomater",
+          "matched_product": "Unifood Mandler hakkede, uden hinde, 1 kg (7998)",
+          "gross_quantity_kg": 15.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 15.75,
+          "price_per_kg": 96.91000000000001,
+          "ingredient_cost": 1526.3325000000002,
+          "waste_cost": 72.6825,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Piskefløde",
+          "matched_product": "Arla Pro Piskefløde 38%, 1 l (16583)",
+          "gross_quantity_kg": 20.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 21.0,
+          "price_per_kg": 40.59654471544716,
+          "ingredient_cost": 852.5274390243903,
+          "waste_cost": 40.59654471544716,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Grøntsagsbouillon",
+          "matched_product": "Grøntsagsbouillon",
+          "gross_quantity_kg": 30.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 31.5,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 1575.0,
+          "waste_cost": 75.0,
+          "supplier": "ESTIMATED"
+        }
+      ],
+      "condiments": [
+        {
+          "name": "salt",
+          "quantity_per_portion": 0.002,
+          "total_quantity": 0.9,
+          "price": 8.5,
+          "cost": 7.65
+        },
+        {
+          "name": "peber",
+          "quantity_per_portion": 0.001,
+          "total_quantity": 0.45,
+          "price": 85.0,
+          "cost": 38.25
+        },
+        {
+          "name": "olie",
+          "quantity_per_portion": 0.01,
+          "total_quantity": 4.5,
+          "price": 25.0,
+          "cost": 112.5
+        },
+        {
+          "name": "vand",
+          "quantity_per_portion": 0.1,
+          "total_quantity": 45.0,
+          "price": 0.01,
+          "cost": 0.45
+        }
+      ],
+      "total_ingredient_cost": 17958.813679024388,
+      "total_condiment_cost": 158.85,
+      "waste_cost": 911.1339847154472,
+      "total_cost": 18117.663679024387,
+      "cost_per_portion": 40.261474842276414
+    },
+    {
+      "recipe_name": "Oksesteg med Rødvinssauce & Glaserede Perleløg",
+      "portions": 450,
+      "ingredients": [
+        {
+          "name": "Oksekød (tykkam, bov)",
+          "matched_product": "Frost Cater Quality Kebab af oksekød, stegt, halal, 1 kg (1-8217 F)",
+          "gross_quantity_kg": 90.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 94.5,
+          "price_per_kg": 118.597,
+          "ingredient_cost": 11207.4165,
+          "waste_cost": 533.6865,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Løg",
+          "matched_product": "Løg",
+          "gross_quantity_kg": 11.8,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 12.980000000000002,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 649.0000000000001,
+          "waste_cost": 59.00000000000001,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Gulerødder",
+          "matched_product": "Chefs Cut Gulerødder julienne strimler 2 mm, 1 kg økologisk (82027)",
+          "gross_quantity_kg": 11.8,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 12.39,
+          "price_per_kg": 31.938,
+          "ingredient_cost": 395.71182,
+          "waste_cost": 18.843420000000002,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Knoldselleri",
+          "matched_product": "Knoldselleri",
+          "gross_quantity_kg": 6.7,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 7.035,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 351.75,
+          "waste_cost": 16.75,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Rødvin",
+          "matched_product": "Schloß Kronsburg Rødvin alkoholfri,Schloss Kronsburg (218940) 6 x 75 cl",
+          "gross_quantity_kg": 15.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 15.75,
+          "price_per_kg": 50.68082191780822,
+          "ingredient_cost": 798.2229452054794,
+          "waste_cost": 38.010616438356166,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Oksebouillon",
+          "matched_product": "Oksebouillon",
+          "gross_quantity_kg": 20.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 21.0,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 1050.0,
+          "waste_cost": 50.0,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Piskefløde (til sauce)",
+          "matched_product": "Arla Pro Piskefløde 38%, 1 l (16583)",
+          "gross_quantity_kg": 7.0,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 7.3500000000000005,
+          "price_per_kg": 40.59654471544716,
+          "ingredient_cost": 298.38460365853666,
+          "waste_cost": 14.208790650406508,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Tyttebærsyltetøj",
+          "matched_product": "Tyttebærsyltetøj",
+          "gross_quantity_kg": 0.7,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 0.735,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 36.75,
+          "waste_cost": 1.7499999999999998,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Perleløg",
+          "matched_product": "Perleløg",
+          "gross_quantity_kg": 16.9,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 18.59,
+          "price_per_kg": 50.0,
+          "ingredient_cost": 929.5,
+          "waste_cost": 84.5,
+          "supplier": "ESTIMATED"
+        },
+        {
+          "name": "Sukker (til løg)",
+          "matched_product": "Jolly Jolly Cola, sukkerfri, 33 cl (801018)",
+          "gross_quantity_kg": 1.0,
+          "waste_percentage": 10.0,
+          "actual_quantity_kg": 1.1,
+          "price_per_kg": 13.793939393939393,
+          "ingredient_cost": 15.173333333333334,
+          "waste_cost": 1.3793939393939394,
+          "supplier": "Hørkram"
+        },
+        {
+          "name": "Kartofler",
+          "matched_product": "Frisksnit Søde kartofler julienne 2 mm, 1 kg (3712-1)",
+          "gross_quantity_kg": 84.4,
+          "waste_percentage": 5.0,
+          "actual_quantity_kg": 88.62,
+          "price_per_kg": 57.112,
+          "ingredient_cost": 5061.26544,
+          "waste_cost": 241.01264000000003,
+          "supplier": "Hørkram"
+        }
+      ],
+      "condiments": [
+        {
+          "name": "salt",
+          "quantity_per_portion": 0.002,
+          "total_quantity": 0.9,
+          "price": 8.5,
+          "cost": 7.65
+        },
+        {
+          "name": "peber",
+          "quantity_per_portion": 0.001,
+          "total_quantity": 0.45,
+          "price": 85.0,
+          "cost": 38.25
+        },
+        {
+          "name": "olie",
+          "quantity_per_portion": 0.01,
+          "total_quantity": 4.5,
+          "price": 25.0,
+          "cost": 112.5
+        },
+        {
+          "name": "vand",
+          "quantity_per_portion": 0.1,
+          "total_quantity": 45.0,
+          "price": 0.01,
+          "cost": 0.45
+        }
+      ],
+      "total_ingredient_cost": 20793.17464219735,
+      "total_condiment_cost": 158.85,
+      "waste_cost": 1059.1413610281566,
+      "total_cost": 20952.02464219735,
+      "cost_per_portion": 46.560054760438554
+    }
+  ]
+}

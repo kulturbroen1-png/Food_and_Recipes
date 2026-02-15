@@ -1,14 +1,533 @@
-/* Basic reset and Tailwind directives if configured, otherwise just a placeholder */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ============================================ */
+/* CaterCare Ultimate — Premium Design System   */
+/* ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* CSS Custom Properties */
+:root {
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-hover: rgba(255, 255, 255, 0.15);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --accent-blue: #3b82f6;
+  --accent-teal: #14b8a6;
+  --accent-purple: #8b5cf6;
+  --accent-orange: #f97316;
+  --accent-green: #22c55e;
+  --accent-pink: #ec4899;
+  --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #14b8a6 100%);
+  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 60px rgba(59, 130, 246, 0.15);
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
 }
 
+/* Global Reset & Base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Animated Background Gradient */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(20, 184, 166, 0.04) 0%, transparent 60%);
+  z-index: -1;
+  animation: backgroundShift 20s ease-in-out infinite alternate;
+}
+
+@keyframes backgroundShift {
+  0% {
+    background:
+      radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, rgba(20, 184, 166, 0.04) 0%, transparent 60%);
+  }
+
+  50% {
+    background:
+      radial-gradient(ellipse at 60% 30%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(ellipse at 30% 70%, rgba(236, 72, 153, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 60%, rgba(59, 130, 246, 0.05) 0%, transparent 60%);
+  }
+
+  100% {
+    background:
+      radial-gradient(ellipse at 40% 60%, rgba(20, 184, 166, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 20%, rgba(249, 115, 22, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 30% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 60%);
+  }
+}
+
+/* Global Overrides for Dark Theme */
+.bg-slate-50,
+.bg-slate-100 {
+  background-color: var(--bg-primary) !important;
+}
+
+.bg-white {
+  background: var(--bg-card) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.bg-white:hover {
+  background: var(--bg-card-hover) !important;
+  border-color: var(--glass-border-hover) !important;
+}
+
+/* Text Colors */
+.text-slate-900,
+.text-slate-800,
+.text-slate-700 {
+  color: var(--text-primary) !important;
+}
+
+.text-slate-500,
+.text-slate-400,
+.text-slate-600 {
+  color: var(--text-secondary) !important;
+}
+
+.text-slate-300 {
+  color: var(--text-muted) !important;
+}
+
+/* Border Colors */
+.border-slate-100,
+.border-slate-200,
+.border-slate-300 {
+  border-color: var(--glass-border) !important;
+}
+
+/* Shadow Upgrades */
+.shadow-xl {
+  box-shadow: var(--shadow-glass) !important;
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Yearly Menu Calendar - Fix Visibility */
+.yearly-summary,
+.yearly-summary div,
+.yearly-summary strong {
+  color: #111 !important;
+}
+
+.yearly-summary h3 {
+  color: #2e7d32 !important;
+}
+
+/* Navigation Bar — Glassmorphism */
+nav.bg-slate-900,
+nav[class*="bg-slate-900"] {
+  background: rgba(15, 23, 42, 0.85) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.8) !important;
+  backdrop-filter: blur(24px) saturate(1.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow:
+    0 -8px 32px rgba(0, 0, 0, 0.3),
+    0 0 80px rgba(59, 130, 246, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Active Nav Button Glow */
+.bg-blue-600 {
+  background: linear-gradient(135deg, #3b82f6, #6366f1) !important;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Dashboard Cards — Glass Effect */
+.rounded-\[2rem\] {
+  border-radius: var(--radius-2xl) !important;
+  background: var(--bg-card) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--glass-border) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.rounded-\[2rem\]:hover {
+  background: var(--bg-card-hover) !important;
+  border-color: var(--glass-border-hover) !important;
+  transform: translateY(-4px) !important;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Card Icon Containers — Glow Effect */
+.bg-blue-100 {
+  background: rgba(59, 130, 246, 0.15) !important;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.bg-orange-100 {
+  background: rgba(249, 115, 22, 0.15) !important;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+}
+
+.bg-green-100 {
+  background: rgba(34, 197, 94, 0.15) !important;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+}
+
+.bg-emerald-100 {
+  background: rgba(16, 185, 129, 0.15) !important;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+.bg-purple-100 {
+  background: rgba(139, 92, 246, 0.15) !important;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.bg-indigo-100 {
+  background: rgba(99, 102, 241, 0.15) !important;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+/* Icon text colors (keep vibrant) */
+.text-blue-600 {
+  color: #60a5fa !important;
+}
+
+.text-orange-600 {
+  color: #fb923c !important;
+}
+
+.text-green-600 {
+  color: #4ade80 !important;
+}
+
+.text-emerald-600 {
+  color: #34d399 !important;
+}
+
+.text-purple-600 {
+  color: #a78bfa !important;
+}
+
+.text-indigo-600 {
+  color: #818cf8 !important;
+}
+
+/* Global Button Interactivity */
+button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0) scale(0.97);
+  filter: brightness(0.94);
+}
+
+/* Custom Scrollbar — Dark Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Component-level overrides for inner panels */
+.bg-gray-50,
+.bg-gray-100 {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.bg-gray-200 {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.text-gray-900,
+.text-gray-800,
+.text-gray-700 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-600,
+.text-gray-500,
+.text-gray-400 {
+  color: var(--text-secondary) !important;
+}
+
+.border-gray-200,
+.border-gray-300,
+.border-gray-100 {
+  border-color: var(--glass-border) !important;
+}
+
+/* Tables — Dark Glass */
+table {
+  color: var(--text-primary);
+}
+
+th {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--glass-border) !important;
+}
+
+td {
+  border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+tr:hover td {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Input Fields — Dark */
+input,
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--glass-border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15) !important;
+  outline: none !important;
+}
+
+/* Code */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'JetBrains Mono', 'Fira Code', source-code-pro, Menlo, Monaco, Consolas, monospace;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+/* Fade In Animation */
+.animate-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger Animation for Cards */
+.grid>div:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.grid>div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.grid>div:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.grid>div:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.grid>div:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.grid>div:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.grid>div {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Gradient Text Helper */
+.bg-gradient-to-r {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+/* Status Badge Colors */
+.bg-green-500 {
+  background: var(--accent-green) !important;
+}
+
+.bg-blue-500 {
+  background: var(--accent-blue) !important;
+}
+
+.bg-purple-500 {
+  background: var(--accent-purple) !important;
+}
+
+.bg-orange-500 {
+  background: var(--accent-orange) !important;
+}
+
+/* Print Styles — Keep Clean */
+/* Print Styles — Clean & Professional */
+@media print {
+  @page {
+    size: A4 portrait;
+    /* Force portrait for list view */
+    margin: 1cm;
+  }
+
+  /* Reset body background */
+  body {
+    background-color: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    /* Keep colors for charts/badges if needed */
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide Background Gradients */
+  body::before {
+    display: none !important;
+  }
+
+  /* Hide Navigation, Buttons, and Inputs */
+  nav,
+  button,
+  input,
+  select,
+  .no-print,
+  [role="button"],
+  .border-b {
+    /* Hide header border */
+    display: none !important;
+  }
+
+  /* Force Block layout for Grid to stack items */
+  .grid {
+    display: block !important;
+  }
+
+  /* Dashboard Cards Styling for Print */
+  .bg-slate-900,
+  .rounded-3xl,
+  .rounded-\[2rem\] {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    color: black !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+    break-inside: avoid;
+    /* Prevent card splitting */
+    page-break-inside: avoid;
+  }
+
+  /* Text Color Corrections */
+  .text-white,
+  .text-slate-200,
+  .text-slate-300,
+  .text-slate-400,
+  .text-slate-500 {
+    color: #000 !important;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3 {
+    color: #000 !important;
+    page-break-after: avoid;
+  }
+
+  h1 {
+    font-size: 24pt !important;
+    margin-bottom: 0.5cm !important;
+  }
+
+  h2 {
+    font-size: 18pt !important;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+  }
+
+  /* Specific Elements */
+  .bg-blue-500\/10,
+  .bg-emerald-500\/10,
+  .bg-slate-800 {
+    background: #f8fafc !important;
+    /* Light gray background for boxes */
+    border: 1px solid #eee !important;
+  }
+
+  /* Status Badges */
+  .bg-blue-500\/20,
+  .bg-emerald-500\/20 {
+    border: 1px solid #000 !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
 }

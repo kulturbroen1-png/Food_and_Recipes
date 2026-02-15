@@ -180,7 +180,32 @@ FORMAT: Returner JSON med alle beregninger og optimeringer.
 };
 
 export const generateWeeklyMenuPlanRequest = (month: string, preferences: string): GenerateContentParameters => {
-  const prompt = `Generer en uges menuplan for ${month}. Præferencer: ${preferences}. Fokus på traditionel dansk mad, E-kost (energitæt). Ingen fokus på økologi pt.`;
+  const prompt = `Generer en komplet uges menuplan for ${month}.
+
+VIGTIGT - FULDSTÆNDIG MENUPLAN:
+- Hver dag SKAL have både hovedret OG biret/dessert
+- "biret" feltet må ALDRIG være tomt
+- Biret skal være konkrete desserter egnet til ældre (f.eks. Gammeldags ris à l'amande, Æblekage med flødeskum, Gulerodskage, Chokoladekage, Hindbærgrød med fløde, Kærnemælkskoldskål, Franskbrød med syltetøj)
+
+MÅLGRUPPE: ${preferences}
+
+FOKUS:
+- Traditionel dansk mad
+- E-kost (energitæt, møre konsistens)
+- Ældreloven 2025 compliance
+- Varieret ugeplan med forskellige proteinkilder
+
+HVER DAG SKAL INDEHOLDE:
+- Hovedret: Kød/fisk + sauce + kulhydrat + grønt
+- Biret/Dessert: SKAL være en specifik dansk dessert
+
+EKSEMPEL på korrekt biret:
+✓ KORREKT: "Gammeldags ris à l'amande med kirsebærsovs"
+✗ FORKERT: "" (tom)
+✗ FORKERT: "Dessert" (for generisk)
+
+Generér JSON array med 7 dage.`;
+
   return {
     model: MODEL_RECIPE_BASIC,
     contents: [{ parts: [{ text: prompt }] }],
@@ -199,9 +224,10 @@ export const generateWeeklyMenuPlanRequest = (month: string, preferences: string
             sauce: { type: Type.STRING },
             carb: { type: Type.STRING },
             veg: { type: Type.STRING },
-            biret: { type: Type.STRING },
+            biret: { type: Type.STRING, description: "PÅKRÆVET: Specifik dansk dessert, aldrig tom" },
             isHoliday: { type: Type.BOOLEAN }
-          }
+          },
+          required: ['date', 'dish', 'biret']
         }
       }
     }

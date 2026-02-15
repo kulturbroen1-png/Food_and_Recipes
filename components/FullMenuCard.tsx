@@ -1,6 +1,6 @@
 
 import React, { useRef, useMemo, useEffect, useState } from 'react';
-import { MealDay, aLaCarteMenu } from '../services/mealPlanData';
+import { MealDay, aLaCarteMenu as defaultALaCarteMenu, ALaCarteItem } from '../services/mealPlanData';
 import { MASTER_CHECKLIST } from '../services/instructionManifest';
 import { Printer } from 'lucide-react';
 import './MenuPrintStyles.css';
@@ -11,11 +11,14 @@ const ROWS_PER_PAGE_1 = 15; // Approximate, depends on weeks. Logic below splits
 interface FullMenuCardProps {
   monthData: MealDay[];
   monthName: string;
+  aLaCarte?: ALaCarteItem[];
 }
 
-const FullMenuCard: React.FC<FullMenuCardProps> = ({ monthData, monthName }) => {
+const FullMenuCard: React.FC<FullMenuCardProps> = ({ monthData, monthName, aLaCarte }) => {
+  const activeALaCarte = aLaCarte || defaultALaCarteMenu;
   const contact = MASTER_CHECKLIST.DESIGN_LAYOUT.KONTAKT;
   const year = "2026";
+  const portionStandards = MASTER_CHECKLIST.SIKKERHEDS_MÆNGDER;
 
   // Month calculation for Ala Carte return date (20th of previous month)
   // Logic: The note says "À la Carte afleveres senest d. 20. [måned] kl. 16:00". 
@@ -107,6 +110,9 @@ const FullMenuCard: React.FC<FullMenuCardProps> = ({ monthData, monthName }) => 
         <div className="info-bar">
           <span className="contact-highlight">📞 Køkkenet: {contact}</span> | Telefontid: Hverdage 12:00 - 13:00<br />
           <strong>Bestil senest 1 hverdag før levering • 2 dage før weekend/helligdag</strong>
+          <div className="text-[9pt] font-semibold mt-1">
+            Portionsstandarder: Hovedret {portionStandards.HOVEDKOMPONENT} • Sauce {portionStandards.SAUCE} • Kulhydrat {portionStandards.KULHYDRAT} • Tilbehør {portionStandards.TILBEHØR}
+          </div>
         </div>
 
         <table className="menu-table">
@@ -244,9 +250,9 @@ const FullMenuCard: React.FC<FullMenuCardProps> = ({ monthData, monthName }) => 
         <div className="alc-grid">
           <div className="alc-col">
             <div className="alc-header" style={{ background: '#2c5f2d' }}>🍽️ HOVEDRETTER</div>
-            {aLaCarteMenu.filter(m => m.category === 'Hovedret').map(item => (
+            {activeALaCarte.filter(m => m.category === 'Hovedret').map(item => (
               <div key={item.id} className="alc-card">
-                <h3>Nr. {item.id}: {item.name}</h3>
+                <h3>{item.name}</h3>
                 <p>{item.description}</p>
                 <div style={{ fontSize: '7pt', color: '#666', marginTop: '4px', borderTop: '1px solid #eee', paddingTop: '2px' }}>
                   Protein: 25-30g | Energi: 800-950 KJ | Fedt: 35-45 E%
@@ -255,10 +261,10 @@ const FullMenuCard: React.FC<FullMenuCardProps> = ({ monthData, monthName }) => 
             ))}
           </div>
           <div className="alc-col">
-            <div className="alc-header" style={{ background: '#0277bd' }}>🥣 SUPPER & PUDDING</div>
-            {aLaCarteMenu.filter(m => m.category === 'Suppe').map(item => (
+            <div className="alc-header" style={{ background: '#0277bd' }}>🥣 SUPPER & GRØD</div>
+            {activeALaCarte.filter(m => m.category === 'Suppe').map(item => (
               <div key={item.id} className="alc-card" style={{ borderLeftColor: '#0277bd' }}>
-                <h3>Nr. {item.id}: {item.name}</h3>
+                <h3>{item.name}</h3>
                 <p>{item.description}</p>
                 <div style={{ fontSize: '7pt', color: '#666', marginTop: '4px', borderTop: '1px solid #eee', paddingTop: '2px' }}>
                   Protein: 15-20g | Energi: 600-750 KJ | Fedt: 25-35 E%
@@ -268,9 +274,9 @@ const FullMenuCard: React.FC<FullMenuCardProps> = ({ monthData, monthName }) => 
           </div>
           <div className="alc-col">
             <div className="alc-header" style={{ background: '#ef6c00' }}>🍰 DESSERTER</div>
-            {aLaCarteMenu.filter(m => m.category === 'Dessert').map(item => (
+            {activeALaCarte.filter(m => m.category === 'Dessert').map(item => (
               <div key={item.id} className="alc-card" style={{ borderLeftColor: '#ef6c00' }}>
-                <h3>Nr. {item.id}: {item.name}</h3>
+                <h3>{item.name}</h3>
                 <p>{item.description}</p>
                 <div style={{ fontSize: '7pt', color: '#666', marginTop: '4px', borderTop: '1px solid #eee', paddingTop: '2px' }}>
                   Protein: 8-12g | Energi: 400-550 KJ | Fedt: 40-50 E%
@@ -282,6 +288,9 @@ const FullMenuCard: React.FC<FullMenuCardProps> = ({ monthData, monthName }) => 
 
         <div className="footer-nutri" style={{ marginTop: '15px', padding: '8px' }}>
           <strong>À la carte retter:</strong> Leveres kølet og skal opvarmes før servering • Alle retter er tilpasset småtspisende
+          <div className="text-[9pt] mt-1">
+            Portionsstandarder: Hovedret {portionStandards.HOVEDKOMPONENT} • Sauce {portionStandards.SAUCE} • Kulhydrat {portionStandards.KULHYDRAT} • Tilbehør {portionStandards.TILBEHØR}
+          </div>
         </div>
       </div>
 
